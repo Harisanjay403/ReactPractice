@@ -1,0 +1,13 @@
+.student table {
+    border:1px solid #ccc;
+    width:200px;
+    border-collapse: collapse;
+}
+
+.student table tr,
+.student table td,
+.student table th
+{
+    border:1px solid #ccc;
+    width:200px;
+}
