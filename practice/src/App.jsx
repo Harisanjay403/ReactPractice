@@ -10,6 +10,10 @@ function App() {
     {id:2, names:"item2"},
     {id:3, names:"item3"},
   ]
+
+  const handleClick=()=>{
+    alert("button is Clicked")
+  }
   
 
   return (
@@ -25,7 +29,7 @@ function App() {
         <p> This is a simple parameter 3</p>
       </ChildrenComponent>
 
-      <ArraySample items={items}/>
+      <ArraySample items={items} handleClick={ handleClick }/>
      
     </>
   )
