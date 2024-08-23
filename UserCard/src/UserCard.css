@@ -24,6 +24,7 @@
     position: relative;
     margin:auto;
     border-radius:5px;
+    width:250px;
 
 }
 .isOnline {
@@ -74,5 +75,31 @@
 }
 
 .skills_heading{
-    background-color: green;
+    background-color: rgb(175, 236, 82);
+    padding:5px 10px;
+    border-radius: 4px;
+    height:30px;
+    margin-left:5px;
+    align-self: flex-start;
+    
+}
+
+.skills{
+    display:flex;
+    padding:5px;
+}
+
+.skills ul{
+    display:flex;
+    flex-wrap:wrap;
+}
+
+.skills ul li{
+    list-style: none;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    text-align: center;
+    margin:0px 5px 5px 0px;
+    border-radius: 2px;
+
 }

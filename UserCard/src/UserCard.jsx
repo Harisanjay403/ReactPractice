@@ -19,14 +19,16 @@ function User(){
 
             </div>
             
+            <h4 className='skills_heading'>Skills</h4>
 
             <div className="skills">
-                <h4 className='skills_heading'>Skills</h4>
+                
                 <ul>
                     <li>HTML </li>
                     <li>CSS </li>
                     <li>Java Script</li>
                     <li>React </li>
+                    <li>Redux</li>
                     <li>Redux</li>
                 </ul>
             </div>
