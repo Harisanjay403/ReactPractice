@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+    font-style:italic;
+}
+
+.qr-code-container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height:100vh;
+    width:100%;
+}
+
+.heading{
+    font-weight: 700;
+    border-bottom: 1px solid #ccc;
+    padding:7px;
+    color:#3498db;
+}
+
+.img{
+    padding:5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin:10px;
+    border-radius:10px;
+}
+
+.input-label{
+    display:block;
+    padding:10px;
+    font-size:18px;
+    color: #888888;
+}
+
+input{
+    padding:10px 15px;
+    width:350px;
+    margin-bottom:20px;
+    outline:none;
+    border-color:#3498db;
+    border-radius:10px;
+}
+
+.btn-div{
+    display:flex;
+    justify-content: space-between;
+}
+
+button{
+    padding:10px 15px;
+    border:none;
+    color:white;
+    font-weight:700;
+    margin:30px 15px;
+}
+
+.generate-btn{
+    background-color:#3498db;
+    border-radius:5px;
+    font-size:16px;
+    
+}
+
+.download-btn{
+    background-color:#219a52;
+    border-radius:5px;
+    font-size:16px;
+}
+
+.footer{
+    color:#777777;
+    margin-top:30px;
+}
+
+.footer span{
+    color:#3498db;
+}
