@@ -7,11 +7,11 @@ export const Qrcodegenerator = () => {
   
   const[loading,setLoading]=useState(false)
   const [qrData,setQrData]=useState('')
-  const [qrSize,setQrSize]=useState()
+  const [qrSize,setQrSize]=useState(150)
 
   // setImg("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjPWQTnePNQOhGoSq8Sv0hdxWo0QOU_Ys-6djgmxz3f7vYE_QqTANwmbRCU7TADxAQ6-dedxQ07miTw15vMFfBqOPxrZTid5BtVW8d55uP4Rl_z4jpHGUD8VjktnfAo5RMdLQ0ai7wJwOI/s200/Shazim+uddin+pp+image+with+stroke.jpg")
 
-  const handleGenerate = ()=>{
+  async function handleGenerate(){
     
 
     try{
@@ -40,7 +40,11 @@ export const Qrcodegenerator = () => {
          placeholder='Enter the Data'/>
 
         <label htmlFor="size-input" className='input-label'>Enter the size(e.g., 150)</label>
-        <input type="text" id='size-input' value={qrSize} onChange={(e)=>{setQrSize(e.target.value)}} placeholder='Enter the size'/>
+        <input type="text" id='size-input' value={qrSize} onChange={(e)=>{
+          handleGenerate()
+          setQrSize(e.target.value)
+          
+        }} placeholder='Enter the size'/>
 
         <div className='btn-div'>
         <button className='generate-btn' onClick={handleGenerate}>Generate QR Code</button>
