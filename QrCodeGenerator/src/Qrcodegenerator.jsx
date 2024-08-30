@@ -3,11 +3,11 @@ import './Qrcodegenerator.css'
 
 export const Qrcodegenerator = () => {
 
-  const [img,setImg]=useState("")
+  const [img,setImg]=useState("https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=QR%20Code%20Generator%20project%20designed%20by%20Harisanjay%20Rajan")
   
   const[loading,setLoading]=useState(false)
   const [qrData,setQrData]=useState('')
-  const [qrSize,setQrSize]=useState(150)
+  const [qrSize,setQrSize]=useState()
 
   // setImg("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjPWQTnePNQOhGoSq8Sv0hdxWo0QOU_Ys-6djgmxz3f7vYE_QqTANwmbRCU7TADxAQ6-dedxQ07miTw15vMFfBqOPxrZTid5BtVW8d55uP4Rl_z4jpHGUD8VjktnfAo5RMdLQ0ai7wJwOI/s200/Shazim+uddin+pp+image+with+stroke.jpg")
 
@@ -57,8 +57,9 @@ export const Qrcodegenerator = () => {
          placeholder='Enter the Data'/>
 
         <label htmlFor="size-input" className='input-label'>Enter the size(e.g., 150)</label>
-        <input type="text" id='size-input' value={qrSize} onChange={(e)=>{
+        <input type="number" id='size-input' value={qrSize} onChange={(e)=>{
             setQrSize(e.target.value)
+            
           
         }} placeholder='Enter the size'/>
 
