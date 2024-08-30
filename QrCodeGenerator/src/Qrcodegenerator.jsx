@@ -16,7 +16,7 @@ export const Qrcodegenerator = () => {
 
     try{
       setLoading(true)
-      const url=`https://api.qrserver.com/v1/create-qr-code/?size=${qrSize}*${qrSize}&data=${qrData}`
+      const url=`https://api.qrserver.com/v1/create-qr-code/?size=${qrSize}x${qrSize}&data=${qrData}`
       setImg(url)
 
     }catch(error){
@@ -27,13 +27,30 @@ export const Qrcodegenerator = () => {
     }
 
   }
+  const handleDownload = () =>{
+    fetch(img)
+    .then((response)=>response.blob())
+    .then((blob)=>{
+      const link=document.createElement("a");
+      link.href=URL.createObjectURL(blob);
+      link.download= "qrcode.png";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    })
+    .catch((error)=>{
+        console.error("Error downloading QR Code", error);
+      }
+    );
+
+  }
   return (
     <div className='qr-code-container'>
         
         <h1 className='heading'> QR CODE GENERATOR</h1>
         {loading && <p>Please Wait ...</p>}
         
-        {img && <img src={img} alt="image" className='img'/> }
+        {img &&  <img src={img} alt="image" className='img'/> }
 
         <label htmlFor="data-input" className='input-label'>Enter the Date for the QR code</label>
         <input type="text" id='data-input' value={qrData} onChange={(e)=>{setQrData(e.target.value)}} 
@@ -41,14 +58,13 @@ export const Qrcodegenerator = () => {
 
         <label htmlFor="size-input" className='input-label'>Enter the size(e.g., 150)</label>
         <input type="text" id='size-input' value={qrSize} onChange={(e)=>{
-          handleGenerate()
-          setQrSize(e.target.value)
+            setQrSize(e.target.value)
           
         }} placeholder='Enter the size'/>
 
         <div className='btn-div'>
         <button className='generate-btn' onClick={handleGenerate}>Generate QR Code</button>
-        <button className='download-btn'>Download QR Code</button>
+        <button className='download-btn' onClick={handleDownload}>Download QR Code</button>
 
         </div>
       
