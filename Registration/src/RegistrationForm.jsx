@@ -1,7 +1,23 @@
+import { useState } from "react"
 import "./RegistrationForm.css"
 
 
 export const RegistrationForm = () => {
+
+    const[user, setUser]=useState({
+        name:"Karan Kumar",
+        age:25,
+        gender:"male",
+        marital:false,
+        country:"china",
+        bio:"Write something about yourself"
+
+    })
+
+    const handleChange=(e)=>{
+        setUser({...user,[e.target.name]:e.target.value})
+    }
+
   return (
     <div className="registration-form-container">
         <h1>Registration Form</h1>
@@ -9,53 +25,54 @@ export const RegistrationForm = () => {
             <tbody>
                 <tr>
                     <th>Name</th>
-                    <td>Raj Kumar</td>
+                    <td>{user.name}</td>
                 </tr>
                 <tr>
                     <th>Age</th>
-                    <td>23</td>
+                    <td>{user.age}</td>
                 </tr>
                 <tr>
                     <th>Gender</th>
-                    <td>Male</td>
+                    <td>{user.gender}</td>
                 </tr>
                 <tr>
                     <th>Marital Status</th>
-                    <td>unmarried</td>
+                    <td>{user.marital?"married":"Unmarried"}</td>
                 </tr>
                 <tr>
                     <th>Country</th>
-                    <td>India</td>
+                    <td>{user.country}</td>
                 </tr>
                 <tr>
                     <th>Bio</th>
-                    <td>Write something about you</td>
+                    <td>{user.bio}</td>
                 </tr>
                 
             </tbody>
         </table>
 
         <form>
-            <input type="text" placeholder="Enter your name" />
+            <input type="text" placeholder="Enter your name" name="name" onChange={handleChange}/>
             
-            <input type="text" placeholder="Enter your Age"/>
+            <input type="text" placeholder="Enter your Age" name="age"onChange={handleChange}/>
             
             <div className="gender">
-                <label htmlFor="male"> <input type="radio" id="male" name="gender"/>Male</label>
-                <label htmlFor="female"><input type="radio" name="gender" id="female" />Female</label>
+                <label htmlFor="male"> <input type="radio" id="male" name="gender" value="Male" onChange={handleChange}/>Male</label>
+                <label htmlFor="female"><input type="radio" name="gender" id="female" value="Female" onChange={handleChange} />Female</label>
             </div>
-            <label htmlFor="isMarried"><input type="checkbox" id="isMarried" /> Is Married</label>
+            <label htmlFor="isMarried"><input type="checkbox" id="isMarried" name="marital" onChange={handleChange}/> Is Married</label>
 
             <div className="country">
                 <label htmlFor="country-select">Select Country:</label>
-                <select><option>India</option>
-                <option>USA</option>
-                <option>China</option></select>
+                <select value="China" name="country" onChange={handleChange}>
+                    <option value="India">India</option>
+                    <option value="USA">USA</option>
+                    <option value="China">China</option></select>
                 
                 
             </div>
 
-            <textarea placeholder="White something about yourself" rows="5" cols="20"></textarea>
+            <textarea placeholder="White something about yourself" rows="5" cols="20" onChange={handleChange}></textarea>
 
         </form>
         
