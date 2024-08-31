@@ -40,15 +40,22 @@ export const RegistrationForm = () => {
             
             <input type="text" placeholder="Enter your Age"/>
             
-            <label htmlFor="male"> <input type="Radio" id="male" name="gender"/>Male</label>
-            <label htmlFor="female"><input type="radio" name="gender" id="female" />Female</label>
-
+            <div className="gender">
+                <label htmlFor="male"> <input type="radio" id="male" name="gender"/>Male</label>
+                <label htmlFor="female"><input type="radio" name="gender" id="female" />Female</label>
+            </div>
             <label htmlFor="isMarried"><input type="checkbox" id="isMarried" /> Is Married</label>
 
             <div className="country">
-                <label htmlFor="country-se;lect">Select Country:</label>
-                <textarea placeholder="White something about yourself" rows="5" cols="20"></textarea>
+                <label htmlFor="country-select">Select Country:</label>
+                <select><option>India</option>
+                <option>USA</option>
+                <option>China</option></select>
+                
+                
             </div>
+
+            <textarea placeholder="White something about yourself" rows="5" cols="20"></textarea>
 
         </form>
         
