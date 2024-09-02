@@ -9,13 +9,15 @@ export const RegistrationForm = () => {
         age:25,
         gender:"male",
         marital:false,
-        country:"china",
+        country:"India",
         bio:"Write something about yourself"
 
     })
 
     const handleChange=(e)=>{
-        setUser({...user,[e.target.name]:e.target.value})
+        const name=e.target.name;
+        const value=e.target.type === "checkbox"?e.target.checked : e.target.value;
+        setUser({...user,[name]:value})
     }
 
   return (
@@ -64,7 +66,7 @@ export const RegistrationForm = () => {
 
             <div className="country">
                 <label htmlFor="country-select">Select Country:</label>
-                <select value="China" name="country" onChange={handleChange}>
+                <select value={user.country} name="country" onChange={handleChange}>
                     <option value="India">India</option>
                     <option value="USA">USA</option>
                     <option value="China">China</option></select>
@@ -72,7 +74,7 @@ export const RegistrationForm = () => {
                 
             </div>
 
-            <textarea placeholder="White something about yourself" rows="5" cols="20" onChange={handleChange}></textarea>
+            <textarea name="bio" placeholder="White something about yourself" rows="5" cols="20" onChange={handleChange}></textarea>
 
         </form>
         
