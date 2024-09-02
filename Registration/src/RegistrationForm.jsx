@@ -54,9 +54,9 @@ export const RegistrationForm = () => {
         </table>
 
         <form>
-            <input type="text" placeholder="Enter your name" name="name" onChange={handleChange}/>
+            <input type="text" value={user.name} placeholder="Enter your name" name="name" onChange={handleChange}/>
             
-            <input type="text" placeholder="Enter your Age" name="age"onChange={handleChange}/>
+            <input type="text" value={user.age} placeholder="Enter your Age" name="age"onChange={handleChange}/>
             
             <div className="gender">
                 <label htmlFor="male"> <input type="radio" id="male" name="gender" value="Male" onChange={handleChange}/>Male</label>
