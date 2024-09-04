@@ -18,18 +18,22 @@ body{
 
 .container{
     width:350px;
+    display: flex;
+  
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     background-color: #fff;
-    overflow: hidden;
+    /* overflow: hidden; */
     border-radius: 10px;
-    border:2px solid red;
 }
 
 .city-input{
     display: flex;
-    margin:10px;
+    margin:15px;
     justify-content: center;
     align-items: center;
-    width:100%;
+    width:320px;
     border:2px solid #3498db;
     border-radius: 10px;
 }
@@ -37,9 +41,10 @@ body{
 .city-input input{
     border:none;
     border-radius: 10px;
-    flex:1;
+    width:100%;
     padding:10px;
     outline:none;
+
     
     
 
@@ -49,7 +54,6 @@ body{
     height:30px;
     width:30px;
     padding:5px;
-    align-self:flex-end;
 }
 
 .weatherimg{
