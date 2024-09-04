@@ -19,8 +19,9 @@ body{
 .container{
     width:350px;
     background-color: #fff;
-    
+    overflow: hidden;
     border-radius: 10px;
+    border:2px solid red;
 }
 
 .city-input{
@@ -28,14 +29,19 @@ body{
     margin:10px;
     justify-content: center;
     align-items: center;
+    width:100%;
+    border:2px solid #3498db;
+    border-radius: 10px;
 }
 
 .city-input input{
     border:none;
     border-radius: 10px;
-    width:300px;
+    flex:1;
     padding:10px;
-    outline-color:#3498db;
+    outline:none;
+    
+    
 
 }
 
