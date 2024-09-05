@@ -8,10 +8,12 @@ const WeatherDetail=({weatherimg,temp,city,country,lat,lon})=>{
         <>
             <div className='weatherimg'><img src={weatherimg} alt="" /></div>
             <div className="temp">{temp}&#176;C</div>
-            <div>{city}</div>
-            <div>{country}</div>
-            <div>{lat}</div>
-            <div>{lon}</div>
+            <div className="city">{city}</div>
+            <div className="country">{country}</div>
+            <div className='coordinates'>
+                <div>Latitude <span>{lat}</span></div>
+                <div>Longtitude <span>{lon}</span></div>
+            </div>
         </>
     )
 

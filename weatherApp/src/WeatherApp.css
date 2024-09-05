@@ -44,10 +44,6 @@ body{
     width:100%;
     padding:10px;
     outline:none;
-
-    
-    
-
 }
 
 .city-input img{
@@ -65,4 +61,54 @@ body{
 .weatherimg img{
     height:200px;
     width:200px;
+}
+
+.temp,
+.city,
+.country{
+    margin:5px;
+    font-size:30px;
+    
+}
+
+.temp{
+    font-size: 25px;
+    font-weight:700;
+    margin-top:10px;
+    color:#333;
+}
+
+.city{
+    text-transform: capitalize;
+    color:gold;
+
+}
+
+.country{
+    font-size: 18px;
+    font-weight: 700;
+    color:#888;
+}
+
+.coordinates{
+    display:flex;
+    gap:40px;
+    margin: 30px 0px;
+    width:100%;
+    justify-content: space-evenly;
+}
+
+.coordinates div{
+    
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+    color:#888;
+    text-align: center;
+    justify-content: center;
+}
+
+.coordinates div span{
+    color:#444;
+    font-weight: 700;
 }
