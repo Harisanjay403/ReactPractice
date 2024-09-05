@@ -19,13 +19,14 @@ body{
 .container{
     width:350px;
     display: flex;
-  
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     background-color: #fff;
-    /* overflow: hidden; */
+    overflow: hidden;
     border-radius: 10px;
+    border:0.5px solid #3498db;
 }
 
 .city-input{
@@ -93,13 +94,13 @@ body{
 .coordinates{
     display:flex;
     gap:40px;
-    margin: 30px 0px;
+    margin: 20px 0px;
     width:100%;
     justify-content: space-evenly;
 }
 
 .coordinates div{
-    
+    font-size:14px;
     display:flex;
     flex-direction:column;
     gap:14px;
@@ -110,5 +111,42 @@ body{
 
 .coordinates div span{
     color:#444;
+    font-size:18px;
     font-weight: 700;
+}
+
+.data{
+    display:flex;
+    width:100%;
+    justify-content: space-between;
+    padding:20px;
+    text-align:center;
+}
+
+.element img{
+    height:40px;
+    width:40px;
+    opacity:0.8;
+}
+
+.humidity-percentage,
+.wind-percentage{
+    color:#333;
+    font-weight:600;
+}
+
+.text{
+    color:#888;
+    font-size:14px;
+    
+}
+
+.copyright{
+    padding:10px;
+    color:#888;
+    font-size:smaller;
+}
+
+.copyright span{
+    color:#3498db;
 }
