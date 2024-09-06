@@ -36,7 +36,7 @@ export const WeatherApp = () => {
     const [cityName,setCityName]=useState("Chennai")
     const [weatherimg,setWeatherimg]=useState(clearSun);
     const [temp,setTemp]=useState(0);
-    const [city, setCity]=useState("Chennai")
+    const [city, setCity]=useState("")
     const [country,setCountry]=useState("IN")
     const [lat,setLat]=useState(22.775)
     const [lon,setLon]=useState(34.864)
@@ -48,12 +48,20 @@ export const WeatherApp = () => {
     const search = async()=>{
         setLoading(true)
         
-        const url=`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=7aa3031291ef2e98891e4647c3190ea5`
+        const url=`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=7aa3031291ef2e98891e4647c3190ea5&units=Metric`;
 
         try{
-            let res = await fetch(url)
-            let urlDetail =res.json()
-            console.log(urlDetail)
+            let res = await fetch(url);
+            let urlDetail = await res.json();
+            
+            let check = urlDetail.name;
+            setTemp(urlDetail.main.temp)
+            setCity(urlDetail.name)
+            setCountry(urlDetail.sys.country)
+            setLat(urlDetail.coord.lat)
+            setLon(urlDetail.coord.lon)
+            setHumidity(urlDetail.main.humidity)
+            setWind(urlDetail.wind.speed)
 
         }catch(error){
 
