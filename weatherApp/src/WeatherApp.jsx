@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './WeatherApp.css'
 
 import clearSun from './assets/clearSun.png'
@@ -33,7 +33,7 @@ const WeatherDetail=({weatherimg,temp,city,country,lat,lon,humidity,wind})=>{
 }
 
 export const WeatherApp = () => {
-    const [cityName,setCityName]=useState("Chennai")
+    const [cityName,setCityName]=useState("Coimbatore")
     const [weatherimg,setWeatherimg]=useState(clearSun);
     const [temp,setTemp]=useState(0);
     const [city, setCity]=useState("")
@@ -53,9 +53,13 @@ export const WeatherApp = () => {
         try{
             let res = await fetch(url);
             let urlDetail = await res.json();
-            
-            let check = urlDetail.name;
-            setTemp(urlDetail.main.temp)
+            console.log(urlDetail)
+            if(urlDetail.cod === "404"){
+                console.error("city not found ")
+                setCityNotFound(true)
+                setLoading(false)
+            }
+            setTemp(Math.floor(urlDetail.main.temp))
             setCity(urlDetail.name)
             setCountry(urlDetail.sys.country)
             setLat(urlDetail.coord.lat)
@@ -77,18 +81,25 @@ export const WeatherApp = () => {
     }
 
     const handleSearch=(e)=>{
-        if(e.key === "enter"){
+        if(e.key === "Enter"){
             search()
         }
     }
+    useEffect(function(){
+        search()
+    },[])
   return (
     <div className='container'>
         <div className='city-input'>
             <input type="text" placeholder='Search the city' onChange={handleCityName} value={cityName} onKeyDown={handleSearch}/><span><img src="https://static.vecteezy.com/system/resources/thumbnails/014/440/989/small/search-black-shadow-icon-socialicon-set-png.png" alt="search-icon" onClick={()=>{search()}} /></span>
         </div>
 
-        < WeatherDetail weatherimg={weatherimg} temp={temp} city={city} country={country} lat={lat} lon={lon} humidity={humidity} wind={wind}/>
+        
+        {loading && <div className="loading"> Loading...</div>}
+        {cityNotFound && <div className="city-not-found"> City Not Found</div>}
 
+        {< WeatherDetail weatherimg={weatherimg} temp={temp} city={city} country={country} lat={lat} lon={lon} humidity={humidity} wind={wind}/>}
+        
         <p className='copyright'>Designed by <span>Harisanjay</span></p>
         
     </div>

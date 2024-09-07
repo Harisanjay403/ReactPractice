@@ -150,3 +150,12 @@ body{
 .copyright span{
     color:#3498db;
 }
+
+.loading,
+.city-not-found{
+    color:#3498db;
+    font-size:larger;
+    margin:10px;
+    font-weight: 600;
+    
+}
