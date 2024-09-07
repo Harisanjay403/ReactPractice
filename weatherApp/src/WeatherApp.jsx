@@ -2,11 +2,16 @@ import { useEffect, useState } from 'react'
 import './WeatherApp.css'
 
 import clearSun from './assets/clearSun.png'
+import cloud from './assets/cloud.jpg'
+import drizzle from './assets/drizzle.jpg'
+import rain from './assets/rain.jpg'
+import snow from './assets/snow.jpg'
 
-const WeatherDetail=({weatherimg,temp,city,country,lat,lon,humidity,wind})=>{
+const WeatherDetail=({weatherimg,temp,city,country,lat,lon,humidity,wind,weatherCondition})=>{
     return(
         <>
             <div className='weatherimg'><img src={weatherimg} alt="" /></div>
+            <div className='weather-condition'>Weather Condition : {weatherCondition}</div>
             <div className="temp">{temp}&#176;C</div>
             <div className="city">{city}</div>
             <div className="country">{country}</div>
@@ -41,9 +46,27 @@ export const WeatherApp = () => {
     const [lat,setLat]=useState(22.775)
     const [lon,setLon]=useState(34.864)
     const [humidity,setHumidity]=useState(0)
-    const [wind,setWind]=useState(30)
+    const [wind,setWind]=useState("")
+    const [weatherCondition,setWeatherConditon] = useState("")
     const [loading,setLoading]=useState(false)
     const [cityNotFound,setCityNotFound]=useState(false)
+
+    const weatherIconMap={
+        "01d":clearSun,
+        "01n":clearSun,
+        "02d":cloud,
+        "02n":cloud,
+        "03d":drizzle,
+        "03n":drizzle,
+        "04d":drizzle,
+        "04n":drizzle,
+        "09d":rain,
+        "09n":rain,
+        "10d":rain,
+        "10n":rain,
+        "13d":snow,
+        "13n":snow,
+    }
 
     const search = async()=>{
         setLoading(true)
@@ -58,6 +81,7 @@ export const WeatherApp = () => {
                 console.error("city not found ")
                 setCityNotFound(true)
                 setLoading(false)
+                return;
             }
             setTemp(Math.floor(urlDetail.main.temp))
             setCity(urlDetail.name)
@@ -66,11 +90,19 @@ export const WeatherApp = () => {
             setLon(urlDetail.coord.lon)
             setHumidity(urlDetail.main.humidity)
             setWind(urlDetail.wind.speed)
+            setWeatherConditon(urlDetail.weather[0].description)
+
+            const iconCode=urlDetail.weather[0].icon;
+            setWeatherimg(weatherIconMap[iconCode] || clearSun)
+            console.log('The code is ',iconCode)
+            setCityNotFound(false)
+
 
         }catch(error){
 
         }finally{
             setLoading(false)
+            
         }
         let res = await fetch(url)
         let urlDetail =res.json()
@@ -98,7 +130,7 @@ export const WeatherApp = () => {
         {loading && <div className="loading"> Loading...</div>}
         {cityNotFound && <div className="city-not-found"> City Not Found</div>}
 
-        {< WeatherDetail weatherimg={weatherimg} temp={temp} city={city} country={country} lat={lat} lon={lon} humidity={humidity} wind={wind}/>}
+        {!cityNotFound && < WeatherDetail weatherimg={weatherimg} temp={temp} city={city} country={country} lat={lat} lon={lon} humidity={humidity} wind={wind} weatherCondition={weatherCondition}/>}
         
         <p className='copyright'>Designed by <span>Harisanjay</span></p>
         
