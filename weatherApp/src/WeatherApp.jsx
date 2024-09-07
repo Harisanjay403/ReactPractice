@@ -76,7 +76,6 @@ export const WeatherApp = () => {
         try{
             let res = await fetch(url);
             let urlDetail = await res.json();
-            console.log(urlDetail)
             if(urlDetail.cod === "404"){
                 console.error("city not found ")
                 setCityNotFound(true)
@@ -94,7 +93,6 @@ export const WeatherApp = () => {
 
             const iconCode=urlDetail.weather[0].icon;
             setWeatherimg(weatherIconMap[iconCode] || clearSun)
-            console.log('The code is ',iconCode)
             setCityNotFound(false)
 
 
