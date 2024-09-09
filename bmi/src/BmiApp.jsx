@@ -1,7 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './BmiApp.css'
 
 export const BmiApp = () => {
+
+  const [height,setHeight]=useState("")
+  const [weight,setWeight]=useState("")
+  const [bmi,setBmi]=useState("")
+  const [bmiStatus,setBmiStatus]=useState("")
+
+  const calculateBmi =()=>{
+    const heightInMtr = height/100;
+    const bmiValue= weight/(heightInMtr*heightInMtr)
+    console.log(bmiValue)
+    setBmi(bmiValue.toFixed(2))
+  }
+
   return (
     <div>
       <div className="bmi-calculator">
@@ -13,18 +26,18 @@ export const BmiApp = () => {
           
           <div className="input-container">
             <label htmlFor="height"> Height(cm)</label>
-            <input type="text" placeholder='Enter Your Hight' />
+            <input type="text" value={height} onChange={(e)=>{setHeight(e.target.value)}} placeholder='Enter Your Hight' />
           </div>
 
           <div className="input-container">
             <label htmlFor="weight"> Weight(kg)</label>
-            <input type="text" placeholder='Enter Your Weight' />
+            <input type="text" value={weight} onChange={(e)=>{setWeight(e.target.value)}} placeholder='Enter Your Weight' />
           </div>
           
-          <button>Calculate BMI</button>
+          <button onClick={calculateBmi}>Calculate BMI</button>
 
           <div className="result">
-            <p>Your BMI is <span>30</span></p>
+            <p>Your BMI is <span>{bmi}</span></p>
             <p>Status: <span>Over Weight</span> </p>
           </div>
 

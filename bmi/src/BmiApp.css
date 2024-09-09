@@ -20,17 +20,20 @@ body {
 
 .bmi-calculator {
     background-color: #fff;
-    width: 800px;
-    
+    width: 700px;
+    border-radius:8px;
+    border-color:#3dc9ce;
     display:flex;
+    box-shadow: #fff 0px 5px 5px;
 }
 
 .bg-img {
     background-image: url("./assets/bmiImg.png");
     width: 400px;
     background-size : cover;
-    
+    border-radius:8px;
     padding:20px;
+    box-shadow: #fff 0px 5px 5px;
 }
 
 .bmi-data{
@@ -67,7 +70,7 @@ body {
     color:#444;
     padding:10px 5px;
     outline:none;
-        
+    font-size:16px;
 }
 
 .bmi-data button{
