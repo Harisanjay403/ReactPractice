@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: "Lobster", sans-serif;
+}
+
+body {
+    background-color: #130f40;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.bmi-calculator {
+    background-color: #fff;
+    width: 800px;
+    
+    display:flex;
+}
+
+.bg-img {
+    background-image: url("./assets/bmiImg.png");
+    width: 400px;
+    background-size : cover;
+    
+    padding:20px;
+}
+
+.bmi-data{
+    padding:20px;
+    display:flex;
+    flex-direction: column;
+    width:100%;
+    
+}
+.bmi-data h1{
+    padding:10px 0px;
+    text-transform:capitalize;
+    font-weight:700;
+    color:#2980b9
+}
+
+.input-container{
+    display:flex;
+    flex-direction: column;
+    padding:15px 0px;
+    gap:5px 0px;
+    width:100%;
+    
+}
+
+.input-container label{
+    color:#777;
+    font-weight:700;
+    margin-bottom:5px;
+
+}
+
+.input-container input{
+    color:#444;
+    padding:10px 5px;
+    outline:none;
+        
+}
+
+.bmi-data button{
+    outline:none;
+    
+    border:none;
+    border-radius: 4px;
+    color:#e2e6eb;
+    font-weight:700;
+    font-size:16px;
+    padding:6px 12px;
+    flex-grow: 1;
+    width:130px;
+    margin:5px 0px;
+    background-color: #3498db;
+}
+
+.bmi-data button:hover{
+    background-color: #1b4b6b;
+    transition: background-color 0.4s ;
+}
+
+.result{
+    margin:10px 0px;
+    padding:20px 5px;
+    border:2px solid #3498db;
+    border-radius:5px;
+}
+
+.result p {
+    margin-bottom:5px;
+    color:#888;
+    font-weight: 400;
+}
+ 
+.result span{
+    color:#130f40;
+    font-weight: 700;
+}
