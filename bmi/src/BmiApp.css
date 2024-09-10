@@ -24,7 +24,7 @@ body {
     border-radius:8px;
     border-color:#3dc9ce;
     display:flex;
-    box-shadow: #fff 0px 5px 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .bg-img {
@@ -33,7 +33,7 @@ body {
     background-size : cover;
     border-radius:8px;
     padding:20px;
-    box-shadow: #fff 0px 5px 5px;
+    
 }
 
 .bmi-data{
@@ -48,6 +48,10 @@ body {
     text-transform:capitalize;
     font-weight:700;
     color:#2980b9
+}
+
+.error-msg{
+    color:red;
 }
 
 .input-container{
@@ -69,8 +73,10 @@ body {
 .input-container input{
     color:#444;
     padding:10px 5px;
-    outline:none;
+    outline-color:#3498db;
     font-size:16px;
+    border-radius: 8px;
+    border:1px solid #888;
 }
 
 .bmi-data button{
@@ -79,11 +85,11 @@ body {
     border:none;
     border-radius: 4px;
     color:#e2e6eb;
-    font-weight:700;
-    font-size:16px;
-    padding:6px 12px;
+    font-weight:bold;
+    font-size:18px;
+    padding:10px;
     flex-grow: 1;
-    width:130px;
+    width:100px;
     margin:5px 0px;
     background-color: #3498db;
 }
@@ -91,12 +97,13 @@ body {
 .bmi-data button:hover{
     background-color: #1b4b6b;
     transition: background-color 0.4s ;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .result{
     margin:10px 0px;
     padding:20px 5px;
-    border:2px solid #3498db;
+    border:1px solid #888;
     border-radius:5px;
 }
 
@@ -107,6 +114,6 @@ body {
 }
  
 .result span{
-    color:#130f40;
+    color:#3498db;
     font-weight: 700;
 }
