@@ -1,6 +1,43 @@
 import './CurrencyConverter.css'
+import { useEffect, useState } from 'react'
+import  axios  from 'axios';
 
 export const CurrencyConverter = () => {
+
+  const[amount,setAmount]=useState(1)
+  const[fromCurrency,setFromCurrency]=useState("USD")
+  const[toCurrency,setToCurrency]=useState("INR")
+  const[convertedCurrency,setConvertedCurrency]=useState(null)
+  const[exchangeCurrencyRate,setExchangeCurrencyRate]=useState(0)
+
+  const handleAmount=(e)=>{
+    const value = parseFloat(e.target.value)
+    setAmount(value)
+  }
+
+  const handleFromCurrency = (e) =>{
+    setFromCurrency(e.target.value)
+  }
+
+  const handleToCurrency = (e) =>{
+    setToCurrency(e.target.value)
+  }
+
+  useEffect(()=>{
+    const getExchangeRate = async()=>{
+      try{
+        let url=`https://api.exchangerate-api.com/v4/latest/${fromCurrency}`
+        const res = await axios.get(url)
+        console.log(res)
+
+
+      }catch(error){
+        console.error("error occuing in currency converter due to ", error)
+      }
+  }
+  getExchangeRate()
+  },[])
+
   return (
     <div>
         <div className="container">
@@ -11,11 +48,11 @@ export const CurrencyConverter = () => {
 
                 <div className="input-container">
                   <label htmlFor="amt">Amount</label>
-                  <input type="number"  id="amt" />
+                  <input type="number" value={amount} onChange={handleAmount}  id="amt" />
                 </div>
 
                 <div className="input-container">
-                  <label htmlFor="from-currency">From Currency</label>
+                  <label htmlFor="from-currency" value={fromCurrency} onChange={handleFromCurrency}>From Currency</label>
                   <select id="from-currency">
                     <option value="USD">USD - United States Dollar</option>
                     <option value="EUR">EUR - Euro</option>
@@ -32,7 +69,7 @@ export const CurrencyConverter = () => {
 
                 <div className="input-container">
                   <label htmlFor="to-currency">To Currency</label>
-                  <select id="to-currency">
+                  <select id="to-currency" value={toCurrency} onChange={handleToCurrency}>
                     <option value="USD">USD - United States Dollar</option>
                     <option value="EUR">EUR - Euro</option>
                     <option value="GBP">GBP - British Pound Sterling</option>
@@ -47,7 +84,7 @@ export const CurrencyConverter = () => {
                 </div>
 
                 <div className="result">
-                  <p>1 INR is equal to 88.34 USD</p>
+                  <p>{amount} {fromCurrency} is equal to {convertedCurrency} {toCurrency}</p>
                 </div>
 
             </div>
