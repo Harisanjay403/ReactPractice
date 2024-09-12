@@ -32,10 +32,10 @@ export const CurrencyConverter = () => {
         const value= await res.data.rates[toCurrency]
         setConvertedCurrency((value*amount).toFixed(2))
         
-        console.log("from currency is:" + fromCurrency)
-        console.log("to currency is:" + toCurrency)
-        console.log("converted currency  is:" + convertedCurrency)
-        console.log(res)
+        // console.log("from currency is:" + fromCurrency)
+        // console.log("to currency is:" + toCurrency)
+        // console.log("converted currency  is:" + convertedCurrency)
+        // console.log(res)
         
         // console.log(value)
 
@@ -92,7 +92,7 @@ export const CurrencyConverter = () => {
                 </div>
 
                 <div className="result">
-                  <p>{amount} {fromCurrency} is equal to {convertedCurrency} {toCurrency}</p>
+                  <p><span>{amount} {fromCurrency}</span> is equal to <span>{convertedCurrency}  {toCurrency}</span> </p>
                 </div>
 
             </div>

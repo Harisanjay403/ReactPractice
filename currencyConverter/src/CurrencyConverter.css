@@ -49,7 +49,7 @@ h1{
 
 label{
     display:block;
-    color:#333;
+    color:#888;
     padding:3px 0px;
     font-size:18px;
     font-weight:500;
@@ -67,10 +67,10 @@ label{
     border:1px solid #888;
     font-size: 16px;
     outline-color: #3498db;
-
+    color:#555;
 }
 
-.input-container select:focus{
+.input-container select:active{
     border-color: #3498db;
 }
 
@@ -80,6 +80,11 @@ label{
     border:2px solid #349;
     margin: 10px 0px;
     border-radius: 8px;
-    color:#082c44;
+    color:#555;
     font-size: larger;
+}
+
+.result span {
+    color:rgb(41, 55, 124);
+    font-weight: 400;
 }
