@@ -28,15 +28,23 @@ export const CurrencyConverter = () => {
       try{
         let url=`https://api.exchangerate-api.com/v4/latest/${fromCurrency}`
         const res = await axios.get(url)
+        
+        const value= await res.data.rates[toCurrency]
+        setConvertedCurrency((value*amount).toFixed(2))
+        
+        console.log("from currency is:" + fromCurrency)
+        console.log("to currency is:" + toCurrency)
+        console.log("converted currency  is:" + convertedCurrency)
         console.log(res)
-
+        
+        // console.log(value)
 
       }catch(error){
         console.error("error occuing in currency converter due to ", error)
       }
   }
   getExchangeRate()
-  },[])
+  },[amount,fromCurrency,toCurrency])
 
   return (
     <div>
@@ -52,8 +60,8 @@ export const CurrencyConverter = () => {
                 </div>
 
                 <div className="input-container">
-                  <label htmlFor="from-currency" value={fromCurrency} onChange={handleFromCurrency}>From Currency</label>
-                  <select id="from-currency">
+                  <label htmlFor="from-currency" >From Currency</label>
+                  <select id="from-currency" value={fromCurrency} onChange={handleFromCurrency}>
                     <option value="USD">USD - United States Dollar</option>
                     <option value="EUR">EUR - Euro</option>
                     <option value="GBP">GBP - British Pound Sterling</option>
