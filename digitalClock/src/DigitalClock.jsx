@@ -21,6 +21,18 @@ export const DigitalClock = () => {
     return ()=> clearInterval(timer)
     },1000)
 
+    const formatDate = (date)=>{
+        const option={
+                    
+                   year:"numeric",month:"long",
+                   day:"numeric",
+                   weekday:"long",
+                }
+        return date.toLocaleDateString(undefined,option)
+
+    }
+    // console.log(currentTime.getMonth())
+
   return (
     <div className='container'>
         <h1>Digital Clock</h1>
@@ -29,7 +41,7 @@ export const DigitalClock = () => {
             :{startWithZero(currentTime.getMinutes())}
             :{startWithZero(currentTime.getSeconds())}
         </div>
-        <div className="date">Friday,13 September, 2024</div>
+        <div className="date">{formatDate(currentTime)}</div>
 
         
     </div>
