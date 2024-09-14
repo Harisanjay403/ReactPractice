@@ -19,7 +19,7 @@ body{
 .container{
     background-color:rgb(160, 243, 243);
     color:#555;
-    width:250px;
+    width:300px;
     text-align:center;
     padding:10px;
     border-radius:4px;
@@ -35,4 +35,10 @@ h1{
 .time{
     font-size:70px;
     margin-bottom:10px;
+}
+.time span{
+    color:#888;
+    font-size: 30px;
+    font-weight: 400;
+    
 }

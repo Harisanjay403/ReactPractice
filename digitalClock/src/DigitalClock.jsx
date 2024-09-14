@@ -40,6 +40,7 @@ export const DigitalClock = () => {
             {startWithZero(handle12hrs(currentTime.getHours()))}
             :{startWithZero(currentTime.getMinutes())}
             :{startWithZero(currentTime.getSeconds())}
+           <span>{currentTime.getHours() <12 ? " AM" : " PM" }</span> 
         </div>
         <div className="date">{formatDate(currentTime)}</div>
 
