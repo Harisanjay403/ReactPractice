@@ -1,12 +1,13 @@
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './PasswordGenerator.css'
 export const PasswordGenerator = ()=>{
     const [upperCase,setUpperCase]=useState(true)
     const [lowerCase,setLowerCase]=useState(true)
     const [symbol,setSymbol]=useState(true)
     const [number,setNumber]=useState(true)
-    const [length,setLength]=useState()
+    const [length,setLength]=useState(5)
+    const [generatePassword,setGeneratePassword]=useState()
 
     const handleLength = (e) =>{
         setLength(parseInt(e.target.value))
@@ -26,7 +27,24 @@ export const PasswordGenerator = ()=>{
     if(number){
         charset += "012345679"
     }
-    console.log(charset)
+    // console.log(charset)
+    const handleGenerate=()=>{
+        let generatedPassword=""
+
+        for(let i=1; i<=length;i++){
+            const random= Math.floor(Math.random()* charset.length)
+           generatedPassword+=charset[random]
+        }
+        
+        setGeneratePassword(generatedPassword)
+    }
+
+    const handleCopy=()=>{
+        navigator.clipboard.writeText(generatePassword)
+        alert(`Password copied, the password is ${generatePassword}`)
+    }
+
+    useEffect(()=>{handleGenerate()},[])
 
     return(
         <>
@@ -62,11 +80,11 @@ export const PasswordGenerator = ()=>{
                     <label htmlFor="symbol"> Include symbol </label>
                 </div>
 
-                <button className='generate-button'>Generate Password</button>
+                <button className='generate-button' onClick={handleGenerate} >Generate Password</button>
 
                 <div className="generated-password">
-                    <input type="text" readOnly />
-                    <button>Copy</button>
+                    <input type="text" readOnly value={generatePassword} />
+                    <button onClick={handleCopy}>Copy</button>
                 </div>
 
             
