@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
 *{
     padding:0px;
     margin:0px;
     box-sizing: border-box;
-    font-family: "Dancing Script", cursive;
+    font-family: "Lato", sans-serif;
 }
 
 body{
@@ -20,6 +20,7 @@ body{
     width:400px;
     background-color: #fff;
     padding:10px;
+    border-radius: 4px;
 }
 
 .header{
@@ -27,18 +28,32 @@ body{
     display:flex;
     justify-content: space-between;
     background-color: #3498db;
-    padding:4px;
+    padding:5px;
+    border-radius: 4px;
     
 
 }
 
 .header button{
-    padding: 0px  5px 5px 5px;
-    font-size:30px;
+    padding: 5px;
+    font-size:25px;
     font-weight: 700;
     background-color: transparent;
     border: 1px solid #dad7d7;
     color:#fff;
-    
-
+    border-radius: 4px;
+    margin: 0px 1px;
 }
+
+.months,
+.years{
+    font-size:16px;
+    outline:none;
+    border:1px solid #888;
+    border-radius: 4px;
+    color:#555;
+    font-weight: 400;
+    text-transform: uppercase;
+    
+}
+
