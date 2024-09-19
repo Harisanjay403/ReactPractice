@@ -13,15 +13,15 @@ export const Quiz = () => {
                 </div>
 
                 <div className="question-section">
-                    <h2> Question No.: 2</h2>
-                    <p> This is the sample question</p>
+                    <h2> Question No: 2</h2>
+                    <p className="question"> This is the sample question</p>
                     <div className="option-btn">
                         <button>option1</button>
                         <button>option2</button>
                         <button>option3</button>
                         <button>option4</button>
                     </div>
-                    <p> The time left is <span>5s</span></p>
+                    <p className="timer"> The time left is <span>5s</span></p>
                 </div>
             </div>
         </>

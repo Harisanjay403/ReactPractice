@@ -20,7 +20,7 @@ body{
     background-color: #fff;
     width:800px;
     text-align: center;
-    border: 1px solid #7abae4;
+    /* border: 1px solid tomato; */
     border-radius: 5px;
     padding:10px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -28,20 +28,59 @@ body{
 
 h2{
     font-weight: 600;
-    color:#349;
-    margin:10px;
+    color:#444;
+    margin:6px;
 }
 
 .score-section button{
-    padding:8px 15px;
+    padding:8px 16px;
     background-color: tomato;
     outline:none;
     border:1px;
     border-radius: 20px;
     color:white;
-    font-weight: 600;
     margin:10px;
+}
 
+.question {
+    padding:10px;
+    color:#3498db;
 
 }
 
+.option-btn{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+    
+    
+}
+
+.option-btn button{
+    padding:8px 16px;
+    border-radius: 30px;
+    outline:none;
+    border:none;
+    background-color: gold;
+    color:rgb(77, 57, 209);
+    font-weight: 600;
+    margin: 10px 0px;
+}
+
+.option-btn button:hover{
+    background-color:greenyellow;
+    transition: background-color 0.3s linear;
+    
+}
+
+.timer{
+    padding: 10px;
+    color:#888;
+    font-size: 14px;
+}
+
+.timer span{
+    color:black;
+    font-weight:600; 
+}
