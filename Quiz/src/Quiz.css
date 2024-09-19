@@ -5,10 +5,11 @@
     margin:0px;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
+    transition: 0.3s linear;
 }
 
 body{
-    background-color: #888;
+    background-color: #dad8d8;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -28,23 +29,27 @@ body{
 
 h2{
     font-weight: 600;
-    color:#444;
+    color:#777;
     margin:6px;
 }
 
 .score-section button{
     padding:8px 16px;
-    background-color: tomato;
+    background-color: orangered;
     outline:none;
     border:1px;
     border-radius: 20px;
     color:white;
     margin:10px;
+    font-size:16px;
+    font-weight: 500;
 }
 
 .question {
     padding:10px;
-    color:#3498db;
+    color:#333;
+    font-size: 17px;
+    font-weight: 500;
 
 }
 
@@ -62,10 +67,11 @@ h2{
     border-radius: 30px;
     outline:none;
     border:none;
-    background-color: gold;
-    color:rgb(77, 57, 209);
-    font-weight: 600;
+    background-color: rgb(117, 73, 199);
+    color:#fff;
+    font-weight: 500;
     margin: 10px 0px;
+    font-size: 14px;
 }
 
 .option-btn button:hover{
@@ -83,4 +89,38 @@ h2{
 .timer span{
     color:black;
     font-weight:600; 
+}
+
+.btn{
+    display:flex;
+    justify-content: space-between;
+}
+
+.next,
+.previous{
+    padding:8px 16px;
+    border-radius:30px;
+    outline:none;
+    border:none;
+    color:#fff;
+    font-size:16px;
+    font-weight: 500;
+}
+
+.next{
+    background-color:seagreen;
+    
+}
+
+.previous{
+    background-color: red;
+}
+
+.pre{
+    color:#fff;
+    border:none;
+}
+
+.correct{
+    background-color:greenyellow;
 }
