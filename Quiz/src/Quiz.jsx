@@ -7,17 +7,21 @@ export const Quiz = () => {
     const [currentQuestion,setCurrentQuestion]=useState(0);
     const [score,setScore]=useState(0);
     const [timer,setTimer]=useState(10);
-    const [correctAnswer,setCorrectAnswer]=useState(false)
+    
     
 
-    const handleQuestion = (option) =>{
+   
+
+    const handleQuestion = (option,index) =>{
 
         if(option===questionDate[currentQuestion].correctOption){
             setScore((value)=> value+1)
         }
-
-        setCorrectAnswer(false);
-        setCorrectAnswer(true)
+        // const color=option.style.backgroundColor
+        
+        if(option===questionDate[currentQuestion].options[index]){
+            alert(`Your answer for this question is ${option}`)
+        }
        
         
 
@@ -72,7 +76,11 @@ export const Quiz = () => {
             "options":["Voltmeter","Rheostat",        "Wattmeter","Galvanometer"],
             "correctOption": "Galvanometer"
         },
+        
     ]
+
+  
+    
      
     return (
         <>
@@ -90,7 +98,7 @@ export const Quiz = () => {
                     <p className="question">{questionDate[currentQuestion].question}</p>
                     <div className="option-btn">
                         {questionDate[currentQuestion].options.map((option,index)=>(
-                            <button className={correctAnswer?"correct":""} onClick={()=>{handleQuestion(option)}} key={index}>{option}</button>
+                            <button onClick={(e)=>{handleQuestion(option,index)}} key={index}>{option}</button>
                         ))}
                     </div>
                     <div className="btn">
