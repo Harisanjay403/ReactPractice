@@ -36,7 +36,7 @@ body {
     align-items: center;
     border-radius:8px;
     padding:20px;
-    border:1px solid red;
+    
     
 }
 
@@ -44,7 +44,7 @@ body {
     object-fit: cover;
     height:100%;
     width:100%;
-    
+
 }
 
 
@@ -53,7 +53,7 @@ body {
     display:flex;
     flex-direction: column;
     width:100%;
-    border:1px solid greenyellow;
+    
     
 }
 .bmi-data h1{
