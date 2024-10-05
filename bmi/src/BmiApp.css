@@ -20,7 +20,7 @@ body {
 
 .bmi-calculator {
     background-color: #fff;
-    width: 700px;
+    /* width: 700px; */
     border-radius:8px;
     border-color:#3dc9ce;
     display:flex;
@@ -28,19 +28,32 @@ body {
 }
 
 .bg-img {
-    background-image: url("./assets/bmiImg.png");
-    width: 400px;
-    background-size : cover;
+    /* background-image: url("./assets/bmiImg.png"); */
+    /* width: 400px; */
+    /* background-size : cover; */
+    display:flex;
+    justify-content: center;
+    align-items: center;
     border-radius:8px;
     padding:20px;
+    border:1px solid red;
     
 }
+
+.bg-img img{
+    object-fit: cover;
+    height:100%;
+    width:100%;
+    
+}
+
 
 .bmi-data{
     padding:20px;
     display:flex;
     flex-direction: column;
     width:100%;
+    border:1px solid greenyellow;
     
 }
 .bmi-data h1{

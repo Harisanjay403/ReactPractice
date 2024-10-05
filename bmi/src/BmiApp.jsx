@@ -1,5 +1,11 @@
 import React, { useState } from 'react'
 import './BmiApp.css'
+import bmiImg from './assets/bmiImg.png'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import { Image } from 'react-bootstrap';
 
 export const BmiApp = () => {
 
@@ -40,8 +46,51 @@ export const BmiApp = () => {
   }
 
   return (
-    <div>
-      <div className="bmi-calculator">
+    <>
+    
+    
+
+    <Container>
+      <Row className="bmi-calculator">
+        <Col>
+          <div className="bg-img">
+          <Image src={bmiImg} alt="Example" fluid />
+          </div>
+        </Col>
+        
+        <Col>
+        <div className="bmi-data">
+          <h1>Bmi calculator</h1>
+          {errorMsg && <p className='error-msg'>{errorMsg}</p>}
+          
+          <div className="input-container">
+            <label htmlFor="height"> Height(cm)</label>
+            <input type="text" value={height} onChange={(e)=>{setHeight(e.target.value)}} placeholder='Enter Your Hight' />
+          </div>
+
+          <div className="input-container">
+            <label htmlFor="weight"> Weight(kg)</label>
+            <input type="text" value={weight} onChange={(e)=>{setWeight(e.target.value)}} placeholder='Enter Your Weight' />
+          </div>
+          
+          <button onClick={calculateBmi}>Calculate </button>
+
+          {bmi!== null && (<div className="result">
+                <p>Your BMI is <span>{bmi}</span></p>
+                <p>Status: <span>{bmiStatus}</span> </p>
+              </div>)}
+
+        </div>
+        
+        </Col>
+      </Row>
+    </Container>
+
+   
+     
+      {/* 
+      <div>
+        <div className="bmi-calculator">
         
         <div className="bg-img"></div>
         
@@ -68,6 +117,7 @@ export const BmiApp = () => {
 
         </div>
       </div>
-    </div>
+    </div> */}
+    </>
   )
 }
