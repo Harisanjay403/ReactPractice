@@ -13,17 +13,18 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: darkslateblue;
+    background-color: rgb(122, 104, 243) !important;
 }
 .img{
-    height:200px;
-    width:100%;
-    background-image: url("./assets/currency.JPG");
+    height:150px;
+    /* width:100%; */
+    background-image: url("https://play-lh.googleusercontent.com/TuVhvDxhIz4sKtfAfUv5mh2RuTkd1Xa8hEQXlFGS95QNs9dVHt1_bFG6HP4qOCZY5W8");
     background-size:contain;
     background-repeat: no-repeat;
     background-position: center;
     border-radius:5px;
     overflow: hidden;
+    margin:5px;
     
 }
 
@@ -31,20 +32,21 @@ body{
 
 .container{
     background-color:ghostwhite;
-    width:400px;
-    padding:15px;
+    /* width:400px; */
+    padding:10px;
     border-radius: 8px;
+    margin-top:auto;
 }
 
-h1{
+h2{
     color:#3498db;
     font-weight:600;
-    font-size:24px;
+    font-size:18px;
     margin:10px 0px;
     text-align: center;
     border-top:2px dotted #888;
     border-bottom:2px dotted #888;
-    padding:10px;
+    padding:5px;
 }
 
 label{
@@ -55,13 +57,13 @@ label{
     font-weight:500;
 }
 .input-container{
-    margin: 10px 0px;
-    padding:10px 0px;
+    margin: 5px 0px;
+    padding:5px 0px;
 }
 
 .input-container input,
 .input-container select{
-    padding:10px;
+    padding:5px;
     width:100%;
     border-radius:5px;
     border:1px solid #888;
@@ -76,9 +78,9 @@ label{
 
 .result{
     text-align:center;
-    padding:20px 0px;
+    padding:5px 0px;
     border:2px solid #349;
-    margin: 10px 0px;
+    margin: 5px 0px;
     border-radius: 8px;
     color:#555;
     font-size: larger;
