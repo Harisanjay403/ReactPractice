@@ -7,7 +7,7 @@
     font-family: "Lato", sans-serif;
 }
 
-body{
+root{
     height:100vh;
     width:100vw;
     margin:50px auto;
@@ -17,10 +17,12 @@ body{
 }
 
 .calender{
-    width:400px;
+    /* width:400px; */
     background-color: #fff;
     padding:10px;
     border-radius: 4px;
+    
+    
 }
 
 .header{
@@ -30,6 +32,7 @@ body{
     background-color: #3498db;
     padding:5px;
     border-radius: 4px 4px 0px 0px;
+    
     
 
 }
@@ -68,7 +71,6 @@ body{
     text-align: center;
     padding:10px;
     background-color: hsl(204, 70%, 53%);
-    border-radius: 0px 0px 4px 4px;
     color:#f1eded;
     font-weight: 700;
     font-size: 18px;
@@ -80,6 +82,8 @@ body{
     text-align: center;
     padding:10px;
     gap:5px;
+    border:1px solid #888;
+    border-radius: 0px 0px 4px 4px;
     
 }
 
