@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './Faq.css'
+import { Container, Row, Col } from 'react-bootstrap'
 
 const FaqContainer =({answer, question})=>{
     const [show,setShow]=useState(false)
@@ -9,20 +10,28 @@ const FaqContainer =({answer, question})=>{
     }
     return(
         <>
-        <div className="faq-container">
-            <div className="faq-question" onClick={handleShow}>
-                {question}
-            </div>
+        < Container>
+            <Row>
+                <Col xs={12}>
+                    <div className="faq-container">
+                        <div className="faq-question" onClick={handleShow}>
+                            {question}
+                        </div>
+                        
+                        <div className="faq-answer-container">
+                            <div className={`faq-answer  ${show ? "active" : ""}`}>
+                                {answer}
+                            </div>
+                        </div>
             
-            <div className="faq-answer-container">
-            <div className={`faq-answer  ${show ? "active" : ""}`}>
-                {answer}
-            </div>
-            </div>
             
             
-            
-        </div>
+                    </div>
+                
+                </Col>
+            </Row>
+        </Container>
+        
             
             
         </>
