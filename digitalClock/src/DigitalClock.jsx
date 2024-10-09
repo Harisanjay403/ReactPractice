@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './DigitalClock.css'
+import { Container, Row, Col} from 'react-bootstrap'
 
 export const DigitalClock = () => {
 
@@ -31,20 +32,28 @@ export const DigitalClock = () => {
         return date.toLocaleDateString(undefined,option)
 
     }
-    // console.log(currentTime.getMonth())
+    
 
   return (
-    <div className='container'>
-        <h1>Digital Clock</h1>
-        <div className="time">
-            {startWithZero(handle12hrs(currentTime.getHours()))}
-            :{startWithZero(currentTime.getMinutes())}
-            :{startWithZero(currentTime.getSeconds())}
-           <span>{currentTime.getHours() <12 ? " AM" : " PM" }</span> 
+    <Container>
+        <Row>
+            <Col xs={12}>
+            <div className='data-container'>
+            <h1>Digital Clock</h1>
+            <div className="time">
+                {startWithZero(handle12hrs(currentTime.getHours()))}
+                :{startWithZero(currentTime.getMinutes())}
+                :{startWithZero(currentTime.getSeconds())}
+            <span>{currentTime.getHours() <12 ? " AM" : " PM" }</span> 
+            </div>
+            <div className="date">{formatDate(currentTime)}</div>        
         </div>
-        <div className="date">{formatDate(currentTime)}</div>
-
+            
+            </Col>
+        </Row>
         
-    </div>
+
+    </Container>
+    
   )
 }

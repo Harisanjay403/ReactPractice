@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 *{
     padding:0px;
     margin:0px;
     box-sizing: border-box;
-    font-family: "Handjet", sans-serif;
+    font-family: "Bebas Neue", sans-serif;
 }
 
 body{
@@ -13,16 +13,16 @@ body{
     align-items: center;
     height:100vh;
     width:100vw;
-    background-color:teal;
+    background-color:#0E1A40 !important;
 }
 
-.container{
-    background-color:rgb(160, 243, 243);
-    color:#555;
+.data-container{
+    background-color:#77A0F2 !important;
     width:300px;
     text-align:center;
     padding:10px;
     border-radius:4px;
+    color:#fff;
 }
 
 h1{
@@ -37,7 +37,7 @@ h1{
     margin-bottom:10px;
 }
 .time span{
-    color:#888;
+    color:#fff;
     font-size: 30px;
     font-weight: 400;
     
