@@ -7,7 +7,7 @@ export const Qrcodegenerator = () => {
   
   const[loading,setLoading]=useState(false)
   const [qrData,setQrData]=useState('')
-  const [qrSize,setQrSize]=useState()
+  const [qrSize,setQrSize]=useState(210)
 
   // setImg("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjPWQTnePNQOhGoSq8Sv0hdxWo0QOU_Ys-6djgmxz3f7vYE_QqTANwmbRCU7TADxAQ6-dedxQ07miTw15vMFfBqOPxrZTid5BtVW8d55uP4Rl_z4jpHGUD8VjktnfAo5RMdLQ0ai7wJwOI/s200/Shazim+uddin+pp+image+with+stroke.jpg")
 
