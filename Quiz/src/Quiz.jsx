@@ -99,7 +99,7 @@ export const Quiz = () => {
                             <h2> Question No: {currentQuestion + 1}</h2>
                             
                             <p className="question">{questionData[currentQuestion].question}</p>
-                            <div className="option-btn col-xs-12">
+                            <div className="option-btn">
                                 {questionData[currentQuestion].options.map((option,index)=>(
                                     <button onClick={(e)=>{handleQuestion(option,index)}} key={index}>{option}</button>
                                 ))}

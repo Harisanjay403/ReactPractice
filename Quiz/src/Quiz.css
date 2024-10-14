@@ -21,10 +21,13 @@ body{
     background-color: #fff;
     /* width:700px; */
     text-align: center;
-    /* border: 1px solid tomato; */
     border-radius: 5px;
     padding:10px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.score-section {
+    width:100% !important;
 }
 
 h2{
@@ -57,8 +60,9 @@ h2{
     display:flex !important;
     justify-content: center;
     align-items: center;
-    gap:10px;
+    flex-direction: column;
     
+    width:100%;
     
 }
 
@@ -117,4 +121,13 @@ h2{
 
 .correct{
     background-color:greenyellow;
+}
+@media (min-width:576px){
+    .option-btn{
+        flex-direction: row !important;
+        gap:10px;
+    }
+    .data-container{
+        width:800px;
+    }
 }
