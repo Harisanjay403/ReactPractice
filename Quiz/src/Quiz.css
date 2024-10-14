@@ -17,9 +17,9 @@ body{
     width:100vw;
 }
 
-.container{
+.data-container{
     background-color: #fff;
-    width:800px;
+    /* width:700px; */
     text-align: center;
     /* border: 1px solid tomato; */
     border-radius: 5px;
@@ -54,7 +54,7 @@ h2{
 }
 
 .option-btn{
-    display:flex;
+    display:flex !important;
     justify-content: center;
     align-items: center;
     gap:10px;
@@ -80,20 +80,12 @@ h2{
     
 }
 
-.timer{
-    padding: 10px;
-    color:#888;
-    font-size: 14px;
-}
-
-.timer span{
-    color:black;
-    font-weight:600; 
-}
-
 .btn{
-    display:flex;
-    justify-content: space-between;
+    display:flex ;
+    justify-content: space-between ;
+    width:100%;
+    border: none ;
+    
 }
 
 .next,
@@ -117,8 +109,10 @@ h2{
 }
 
 .pre{
-    color:#fff;
+    color:transparent;
     border:none;
+    background-color: transparent;
+    
 }
 
 .correct{

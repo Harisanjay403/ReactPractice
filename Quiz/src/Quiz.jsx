@@ -1,12 +1,13 @@
 import { useState } from "react"
 import "./Quiz.css"
+import { Container, Row, Col } from 'react-bootstrap'
 
 export const Quiz = () => {
 
     const [showScore,setShowScore]=useState(false);
     const [currentQuestion,setCurrentQuestion]=useState(0);
     const [score,setScore]=useState(0);
-    const [timer,setTimer]=useState(10);
+    
     
     
 
@@ -14,12 +15,12 @@ export const Quiz = () => {
 
     const handleQuestion = (option,index) =>{
 
-        if(option===questionDate[currentQuestion].correctOption){
+        if(option===questionData[currentQuestion].correctOption){
             setScore((value)=> value+1)
         }
         // const color=option.style.backgroundColor
         
-        if(option===questionDate[currentQuestion].options[index]){
+        if(option===questionData[currentQuestion].options[index]){
             alert(`Your answer for this question is ${option}`)
         }
        
@@ -30,7 +31,7 @@ export const Quiz = () => {
     
 
     const handleNext = ()=>{
-        if (currentQuestion<questionDate.length-1){
+        if (currentQuestion<questionData.length-1){
             setCurrentQuestion((value)=> value+1)
             
         }else{
@@ -52,12 +53,12 @@ export const Quiz = () => {
         setShowScore(false)
         setScore(0)
         setCurrentQuestion(0)
-        setTimer(10)
+        
         
     }
 
 
-    const questionDate=[
+    const questionData=[
         {
             "id":1,
             "question": "Out of the following which is an insulating material ?",
@@ -84,34 +85,41 @@ export const Quiz = () => {
      
     return (
         <>
-            <div className="container">
-                {showScore ? (
-                    <div className="score-section">
-                    <h2> Your Score is : {score}/{questionDate.length}</h2>
-                    <button onClick={handleRestart}> Restart </button>
+        <Container>
+            <Row>
+                <Col xs={12} md={12} lg={12}>
+                    <div className="data-container">
+                    {showScore ? (
+                        <div className="score-section">
+                            <h2> Your Score is : {score}/{questionData.length}</h2>
+                            <button onClick={handleRestart}> Restart </button>
+                        </div>
+                        ) : (
+                        <div className="question-section">
+                            <h2> Question No: {currentQuestion + 1}</h2>
+                            
+                            <p className="question">{questionData[currentQuestion].question}</p>
+                            <div className="option-btn col-xs-12">
+                                {questionData[currentQuestion].options.map((option,index)=>(
+                                    <button onClick={(e)=>{handleQuestion(option,index)}} key={index}>{option}</button>
+                                ))}
+                            </div>
+                            <div className="btn">
+                                <button className={currentQuestion == 0?"pre":"previous"} onClick={handlePrevious}>Previous</button>
+                                <button className="next" onClick={handleNext}>Next</button>
+                            </div>
+                        </div>
 
-                </div>
-                ) : (
-                    <div className="question-section">
-                    <h2> Question No: {currentQuestion + 1}</h2>
+                    )}
                     
-                    <p className="question">{questionDate[currentQuestion].question}</p>
-                    <div className="option-btn">
-                        {questionDate[currentQuestion].options.map((option,index)=>(
-                            <button onClick={(e)=>{handleQuestion(option,index)}} key={index}>{option}</button>
-                        ))}
-                    </div>
-                    <div className="btn">
-                        <button className={currentQuestion == 0?"pre":"previous"} onClick={handlePrevious}>Previous</button>
-                        <button className="next" onClick={handleNext}>Next</button>
-                    </div>
-                </div>
 
-                )}
+                    
+                    </div>
                 
-
-                
-            </div>
+                </Col>
+            </Row>
+        </Container>
+            
         </>
     )
 
