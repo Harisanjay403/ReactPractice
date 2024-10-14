@@ -54,15 +54,20 @@ export const RegistrationForm = () => {
         </table>
 
         <form>
+            <div className="input-container">
             <input type="text" value={user.name} placeholder="Enter your name" name="name" onChange={handleChange}/>
             
             <input type="text" value={user.age} placeholder="Enter your Age" name="age"onChange={handleChange}/>
+            </div>
+            
             
             <div className="gender">
-                <label htmlFor="male"> <input type="radio" id="male" name="gender" value="Male" onChange={handleChange}/>Male</label>
-                <label htmlFor="female"><input type="radio" name="gender" id="female" value="Female" onChange={handleChange} />Female</label>
+                 <input type="radio" id="male" onClick={()=>{
+                    setUser({...user,gender:"male"})
+                }}  name="gender" value="Male" /><label htmlFor="male">Male</label>
+                <label htmlFor="female"><input type="radio" name="gender"  id="female" value="Female"  onClick={()=>{setUser({...user,gender:"female"})}} />Female</label>
             </div>
-            <label htmlFor="isMarried"><input type="checkbox" id="isMarried" name="marital" onChange={handleChange}/> Is Married</label>
+            <label htmlFor="isMarried"><input type="checkbox" id="isMarried" name="marital" onChange={handleChange} /> Is Married</label>
 
             <div className="country">
                 <label htmlFor="country-select">Select Country:</label>
