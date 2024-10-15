@@ -28,7 +28,7 @@ body{
 }
 
 .registration-form-container table{
-    border:1px solid #ccc;
+    border:1px solid #888;
     border-collapse: collapse;
     margin-bottom:10px;
     max-width:400px;
@@ -61,22 +61,31 @@ form{
     gap:10px;
 }
 
-form input{
+form input[type="text"]{
     padding:8px;
     border-radius:4px;
     outline:none;
     width:100%;
     background-color:transparent;
     color:#4A90E2;
-    
+    border:1px solid #888;
     margin-bottom:10px;
+    font-size: 16px;
+}
+input[type="radio"]{
+    display:inline-block;
+    margin-right:15px;
+    
 }
 
-.gender{
-    /* display:flex; */
-    gap:10px;
-    border:1px solid red;
+.country select{
+    background-color: #333333;
+    border-radius:4px;
+    padding:2px 5px;
+    font-size: 15px;
+    margin:0px 5px;
 }
+
 
 textarea{
     background-color: transparent;
