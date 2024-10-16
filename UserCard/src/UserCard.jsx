@@ -1,4 +1,4 @@
-import '../src/UserCard.css'
+import './UserCard.css'
 
 const userdata=[
     {
@@ -41,9 +41,8 @@ function User(props){
             <h4 className='desig'>{props.desig}</h4>
             
             <div className='btn'>
-            <button>Message</button>
-            <button>Following</button>
-
+                <button>Message</button>
+                <button>Following</button>
             </div>
             
             <h4 className='skills_heading'>Skills</h4>
@@ -64,14 +63,6 @@ function User(props){
 export const UserCard = () => {
   return (
     <>
-        {/* < User 
-            name="Rajesh" 
-            city="Karur" 
-            desig="Front End Developer" 
-            isOnline={false} 
-            skills={["HTML","CSS", "Java Script", "React", "Redux"]}
-            img="https://d38b044pevnwc9.cloudfront.net/cutout-nuxt/home/9-1-change.jpg"
-        /> */}
 
         {userdata.map((user,index)=>(
             <User key={index}
