@@ -1,4 +1,5 @@
 import './UserCard.css'
+import { Container, Row, Col } from 'react-bootstrap'
 
 const userdata=[
     {
@@ -30,31 +31,35 @@ const userdata=[
 function User(props){
     return(
         <>
-        <div className="container">
+        
+                    <div className="data-container">
 
-            <span className={props.isOnline? "isOnline on" : "isOnline off"}>{props.isOnline?"Online" : "Offline"}</span>
+                        <span className={props.isOnline? "isOnline on" : "isOnline off"}>{props.isOnline?"Online" : "Offline"}</span>
 
-            <img className='img' src={props.img} />
+                        <img className='img' src={props.img} />
 
-            <h2 className='name'>{props.name}</h2>
-            <h3 className='city'>{props.city}</h3>
-            <h4 className='desig'>{props.desig}</h4>
-            
-            <div className='btn'>
-                <button>Message</button>
-                <button>Following</button>
-            </div>
-            
-            <h4 className='skills_heading'>Skills</h4>
+                        <h2 className='name'>{props.name}</h2>
+                        <h3 className='city'>{props.city}</h3>
+                        <h4 className='desig'>{props.desig}</h4>
 
-            <div className="skills">
+                        <div className='btn'>
+                            <button>Message</button>
+                            <button>Following</button>
+                        </div>
+
+                        <h4 className='skills_heading'>Skills</h4>
+
+                        <div className="skills">
+                            
+                            <ul>
+                                {props.skills.map((skill,index)=>(<li key={index}>{skill}</li>))}                    
+                            </ul>
+                        </div>
+
+                    </div>
                 
-                <ul>
-                    {props.skills.map((skill,index)=>(<li key={index}>{skill}</li>))}                    
-                </ul>
-            </div>
-
-        </div>
+                
+        
             
         </>
     )
@@ -63,8 +68,12 @@ function User(props){
 export const UserCard = () => {
   return (
     <>
+    <Container>
+        <Row>
+            
 
-        {userdata.map((user,index)=>(
+            {userdata.map((user,index)=>(
+            <Col xs={12} md={4}>    
             <User key={index}
                 name={user.name}
                 city={user.city}
@@ -74,7 +83,11 @@ export const UserCard = () => {
                 img={user.img}
 
             />
-        ))}
+            </Col>
+            ))}
+            
+        </Row>
+    </Container>
     </>
   )
 }

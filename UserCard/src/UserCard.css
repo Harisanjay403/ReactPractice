@@ -8,23 +8,30 @@
 }
 
 #root{
-    display:flex;
-    justify-content:center;
-    align-items: baseline;
+    display:flex ;
+    justify-content:center ;
+    align-items: baseline ;
+    
     height:100vh;
     width:100vw;
-    flex-wrap: wrap;
+    flex-wrap: wrap ;
     margin:20px;
-    background-color: #dff9fb;
+    background-color: #dff9fb ;    
     
-    
+}
+
+body{
+    background-color: #dff9fb ; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
 
 
 
-.container{
+.data-container{
     background-color:#686de0;
     color:white;
     display:flex;
@@ -66,7 +73,8 @@
 
 .name, .city, .desig{
     padding:10px 5px;
-    font-weight:400;
+    font-weight:400 !important;
+    font-size: 18px;
 }
 
 .btn{
@@ -100,6 +108,7 @@
     margin-left:5px;
     align-self: flex-start;
     font-weight: 500;
+    font-size:18px;
     
 }
 
