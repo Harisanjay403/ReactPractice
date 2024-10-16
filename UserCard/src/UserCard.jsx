@@ -67,27 +67,29 @@ function User(props){
 
 export const UserCard = () => {
   return (
-    <>
+    <div className='userContainer'>
     <Container>
         <Row>
             
 
             {userdata.map((user,index)=>(
-            <Col xs={12} md={4}>    
-            <User key={index}
-                name={user.name}
-                city={user.city}
-                desig={user.desig}
-                isOnline={user.isOnline}
-                skills={user.skills}
-                img={user.img}
-
-            />
+            <Col xs={12} md={4}>
+                
+                    <User key={index}
+                    name={user.name}
+                    city={user.city}
+                    desig={user.desig}
+                    isOnline={user.isOnline}
+                    skills={user.skills}
+                    img={user.img}
+                    />
+                    
+            
             </Col>
             ))}
             
         </Row>
     </Container>
-    </>
+    </div>
   )
 }
