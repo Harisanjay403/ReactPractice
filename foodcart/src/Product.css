@@ -68,3 +68,23 @@
     background-color: orangered !important;
     color:white;
 }
+
+@media (max-width:576px){
+    .home-product-detail h4{
+        font-size:14px;
+
+    }
+    .home-product-detail button{
+        font-size:14px;
+        width:100%;
+
+    }
+    .home-product-img{
+        height: 100%;
+        width:100%;
+    }
+    .home-product-img img{
+        height: 100%;
+        width:100%;
+    }
+}

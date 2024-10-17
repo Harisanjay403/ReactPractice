@@ -1,4 +1,5 @@
 import './Product.css'
+import { Container, Row, Col, Image } from 'react-bootstrap'
 
 export const Product = ({data, cart, setCart}) =>{
 
@@ -12,18 +13,25 @@ export const Product = ({data, cart, setCart}) =>{
     
     return(
         <div className="product-container">
-            {data.map((item)=>(<div className='home-product' key={item.id}>
-                <div className="home-product-img">
-                    <img src={item.pic}></img>
-                </div>
+            <Container>
+                <Row>
+                    
+                        {data.map((item)=>(<Col xs={4} key={item.id}><div className='home-product' key={item.id}>
+                            <div className="home-product-img">
+                                <Image src={item.pic} fluid/>
+                            </div>
 
-                <div className="home-product-detail">
-                <h4>{item.name}</h4>
-                <p>Price: Rs.{item.price}</p>
+                            <div className="home-product-detail">
+                                <h4>{item.name}</h4>
+                                <p>Price: Rs.{item.price}</p>
 
-                {cart.includes(item) ? (<button className="btn-remove" onClick={()=>handleRemoveCart(item)}>Remove from Cart</button>):(<button onClick={()=>handleAddCart(item)}>Add to Cart</button>)}
-                </div>
-            </div>))}
+                                {cart.includes(item) ? (<button className="btn-remove" onClick={()=>handleRemoveCart(item)}>Remove from Cart</button>):(<button onClick={()=>handleAddCart(item)}>Add to Cart</button>)}
+                            </div>
+                        </div></Col>))}
+                    
+                </Row>
+            </Container>
+            
         </div>
     )
 }
