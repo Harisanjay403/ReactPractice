@@ -1,7 +1,7 @@
 [
     {
         "id":1,
-        "name":"Poori(1 set)",
+        "name":"Poori (1 set)",
         "price":50,
         "pic":"https://p1.pxfuel.com/preview/346/288/851/indian-food-puri-food-indian.jpg"
     },
@@ -19,7 +19,7 @@
     },
     {
         "id":4,
-        "name":"Idly(1 set)",
+        "name":"Idly (1 set)",
         "price":30,
         "pic":"https://www.shutterstock.com/image-photo/traditional-south-indian-food-idli-260nw-1979324246.jpg"
     },
@@ -37,7 +37,7 @@
     },
     {
         "id":7,
-        "name":"Samosa(1 set)",
+        "name":"Samosa (1 set)",
         "price":30,
         "pic":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxOZCG9_gyX0aHg9nPcQFLw5Wo6CCY0E3NUQ&s"
     },
@@ -49,7 +49,7 @@
     },
     {
         "id":9,
-        "name":"Sapathi/Rotti(1 set)",
+        "name":"Sapathi (1 set)",
         "price":40,
         "pic":"https://media.istockphoto.com/id/1270892752/photo/indian-chapati-with-curry.jpg?s=612x612&w=0&k=20&c=zjA4jo3TgxMz7rOtGtekSmYwlkenGtG97UP2WPUVMiU="
     },
@@ -61,7 +61,7 @@
     },
     {
         "id":11,
-        "name":"Parata(1 set)",
+        "name":"Parata (1 set)",
         "price":60,
         "pic":"https://images.moneycontrol.com/static-mcnews/2021/04/paratha_shutterstock_1641709639.jpg?impolicy=website&width=770&height=431"
     },

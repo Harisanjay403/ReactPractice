@@ -12,8 +12,7 @@ function App() {
   
 
   return (
-    <BrowserRouter>
-    
+    <BrowserRouter>    
      < Header cart={cart} />
      <div className="container">
       <Routes>
