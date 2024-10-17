@@ -1,0 +1,75 @@
+[
+    {
+        "id":1,
+        "name":"Poori(1 set)",
+        "price":50,
+        "pic":"https://p1.pxfuel.com/preview/346/288/851/indian-food-puri-food-indian.jpg"
+    },
+    {
+        "id":2,
+        "name":"Dosa",
+        "price":40,
+        "pic":"https://photos.smugmug.com/Asia/India/i-Pf4hCQr/0/d3d38770/X2/indian-food-dosa-X2.jpg"
+    },
+    {
+        "id":3,
+        "name":"Chicken Biriyani",
+        "price":120,
+        "pic":"https://images.herzindagi.info/image/2018/Oct/indian-foods-loved-by-foreigners.jpg"
+    },
+    {
+        "id":4,
+        "name":"Idly(1 set)",
+        "price":30,
+        "pic":"https://www.shutterstock.com/image-photo/traditional-south-indian-food-idli-260nw-1979324246.jpg"
+    },
+    {
+        "id":5,
+        "name":"Pani Poori",
+        "price":50,
+        "pic":"https://deih43ym53wif.cloudfront.net/Golgappa-india-food-shutterstock_1422373154.jpg_9a7621c1bc.jpg"
+    },
+    {
+        "id":6,
+        "name":"Full Meal",
+        "price":120,
+        "pic":"https://www.tastingtable.com/img/gallery/the-ingredients-youre-unlikely-to-find-in-traditional-indian-food/l-intro-1663259170.jpg"
+    },
+    {
+        "id":7,
+        "name":"Samosa(1 set)",
+        "price":30,
+        "pic":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxOZCG9_gyX0aHg9nPcQFLw5Wo6CCY0E3NUQ&s"
+    },
+    {
+        "id":8,
+        "name":"Mutton Biriyani",
+        "price":150,
+        "pic":"https://www.shutterstock.com/image-photo/indian-chicken-biryani-spicy-food-260nw-2352038435.jpg"
+    },
+    {
+        "id":9,
+        "name":"Sapathi/Rotti(1 set)",
+        "price":40,
+        "pic":"https://media.istockphoto.com/id/1270892752/photo/indian-chapati-with-curry.jpg?s=612x612&w=0&k=20&c=zjA4jo3TgxMz7rOtGtekSmYwlkenGtG97UP2WPUVMiU="
+    },
+    {
+        "id":10,
+        "name":"Chicken Tikka Masala",
+        "price":140,
+        "pic":"https://sulaindianrestaurant.com/wp-content/uploads/2022/09/chicken-tikka-masala.jpg"
+    },
+    {
+        "id":11,
+        "name":"Parata(1 set)",
+        "price":60,
+        "pic":"https://images.moneycontrol.com/static-mcnews/2021/04/paratha_shutterstock_1641709639.jpg?impolicy=website&width=770&height=431"
+    },
+    {
+        "id":12,
+        "name":"Chenna Masala",
+        "price":100,
+        "pic":"https://www.tastingtable.com/img/gallery/20-delicious-indian-dishes-you-have-to-try-at-least-once/chana-masala-1687277791.jpg"
+    }
+
+]
