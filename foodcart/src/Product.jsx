@@ -16,7 +16,7 @@ export const Product = ({data, cart, setCart}) =>{
             <Container>
                 <Row>
                     
-                        {data.map((item)=>(<Col xs={4} sm={4} md={3} key={item.id}>
+                        {data.map((item)=>(<Col className='p-1' xs={4}  sm={4} md={3} key={item.id}>
                         <div className='home-product' key={item.id}>
                             <div className="home-product-img">
                                 <Image src={item.pic} fluid/>

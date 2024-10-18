@@ -18,6 +18,7 @@
     background-color: #fff;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     margin:10px 0px;
+    
 }
 
 .home-product-img{
@@ -33,7 +34,7 @@
 }
 
 .home-product-detail{
-    color:#333;
+    color:#222;
     width: 100%;
     display:flex;
     justify-content: flex-start;
@@ -60,7 +61,7 @@
     background-color: rgb(59, 219, 59);
     border:none;
     border-radius: 16px;
-    width:110px;
+    width:100%;
     justify-content: center;
     
 }
@@ -76,6 +77,9 @@
 }
 
 @media (max-width:576px){
+    .home-product{
+        padding:2px;
+    }
     .home-product-detail h4{
         font-size:14px;
 
