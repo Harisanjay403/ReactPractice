@@ -7,8 +7,8 @@ export const Header = () =>{
         <>
             <div className="header-container">
                 <div className="logo">
-                    <img className='logo' src="./src/assets/logo.JPG" alt="logo" />
-                    <Link to={"/"}>HSR</Link>
+                    
+                    <Link to={"/"}><h1>Harisanjay Rajan</h1></Link>
                 </div>
                 
                 <div className="links">
