@@ -2,6 +2,7 @@ import './App.css'
 import { BrowserRouter,Routes, Route } from 'react-router-dom'
 import {Header} from './Header.jsx'
 import { Home } from './Home.jsx'
+import { Project } from './Project.jsx'
 
 function App() {
   
@@ -12,6 +13,7 @@ function App() {
       <Header />
       < Routes>
         <Route path={'/'} element={< Home />}>
+        <Route path={'/project'} element={ < Project />} />
           
         </Route>
       </Routes>
