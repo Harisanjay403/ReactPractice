@@ -18,14 +18,15 @@ body {
 
 
 
-.bmi-calculator {
+/* .bmi-calculator {
     background-color: #fff;
-    /* width: 700px; */
+    
     border-radius:8px;
     border-color:#3dc9ce;
     display:flex;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
+    border:1px solid red; */
+/* } */
 
 .bg-img {
     /* background-image: url("./assets/bmiImg.png"); */

@@ -51,14 +51,15 @@ export const BmiApp = () => {
     
 
     <Container>
-      <Row className="bmi-calculator">
-        <Col>
+      <Row >
+        {/* <div className="bmi-calculator"> */}
+        <Col xs={12} md={4} >
           <div className="bg-img">
           <Image src={bmiImg} alt="Example" fluid />
           </div>
         </Col>
         
-        <Col>
+        <Col md={6}>
         <div className="bmi-data">
           <h1>Bmi calculator</h1>
           {errorMsg && <p className='error-msg'>{errorMsg}</p>}
@@ -83,6 +84,7 @@ export const BmiApp = () => {
         </div>
         
         </Col>
+        {/* </div> */}
       </Row>
     </Container>
 
