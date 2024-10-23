@@ -68,19 +68,19 @@ export const Project = () =>{
                 <div className="project">
                     <div className="img-container">
                         <div className="project-img">
-                            <img src="./src/assets/currencyconverterimg.JPG" alt="Image" />
+                            <img src="./src/assets/digitalclockimg.JPG" alt="Image" />
                         </div>
 
                         <div className="project-button">
-                            <a href="https://github.com/Harisanjay403/ReactPractice/tree/main/currencyConverter/src" ><button>Github-Code</button></a>
-                            <a href="https://currency-converter---hari.web.app/"><button>Website</button></a>
+                            <a href="https://github.com/Harisanjay403/ReactPractice/tree/main/digitalClock/src" ><button>Github-Code</button></a>
+                            <a href="https://digital-clock-harisanjayrajan.web.app/"><button>Website</button></a>
                         </div>
 
                     </div>           
                     
                     <div className="project-content">
-                        <h1>Currency Converter</h1>
-                        <p>This code defines a CurrencyConverter component using React. It imports necessary modules and state hooks to manage conversion logic. The user inputs an amount, selects a currency to convert from and to. The useEffect hook fetches real-time exchange rates from an API (exchangerate-api.com) whenever the amount or currency selection changes. The converted value is calculated and displayed. Bootstrap is used for layout, and the axios library is utilized for making the API requests.</p>
+                        <h1>Digital Clock</h1>
+                        <p>This React component, DigitalClock, displays a live time with a 12-hour format and a formatted date. It uses useState to store the current time and updates every second with setInterval. The handle12hrs function converts 24-hour time to 12-hour, and startWithZero adds a leading zero to single-digit numbers. The formatDate function formats the date with options like year, month, day, and weekday. The layout uses Bootstrap components for responsiveness.</p>
                     </div>                  
 
                 </div>
