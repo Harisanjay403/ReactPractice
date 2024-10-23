@@ -45,6 +45,46 @@ export const Project = () =>{
 
                 </div>
 
+                <div className="project">
+                    <div className="img-container">
+                        <div className="project-img">
+                            <img src="./src/assets/currencyconverterimg.JPG" alt="Image" />
+                        </div>
+
+                        <div className="project-button">
+                            <a href="https://github.com/Harisanjay403/ReactPractice/tree/main/currencyConverter/src" ><button>Github-Code</button></a>
+                            <a href="https://currency-converter---hari.web.app/"><button>Website</button></a>
+                        </div>
+
+                    </div>           
+                    
+                    <div className="project-content">
+                        <h1>Currency Converter</h1>
+                        <p>This code defines a CurrencyConverter component using React. It imports necessary modules and state hooks to manage conversion logic. The user inputs an amount, selects a currency to convert from and to. The useEffect hook fetches real-time exchange rates from an API (exchangerate-api.com) whenever the amount or currency selection changes. The converted value is calculated and displayed. Bootstrap is used for layout, and the axios library is utilized for making the API requests.</p>
+                    </div>                  
+
+                </div>
+
+                <div className="project">
+                    <div className="img-container">
+                        <div className="project-img">
+                            <img src="./src/assets/currencyconverterimg.JPG" alt="Image" />
+                        </div>
+
+                        <div className="project-button">
+                            <a href="https://github.com/Harisanjay403/ReactPractice/tree/main/currencyConverter/src" ><button>Github-Code</button></a>
+                            <a href="https://currency-converter---hari.web.app/"><button>Website</button></a>
+                        </div>
+
+                    </div>           
+                    
+                    <div className="project-content">
+                        <h1>Currency Converter</h1>
+                        <p>This code defines a CurrencyConverter component using React. It imports necessary modules and state hooks to manage conversion logic. The user inputs an amount, selects a currency to convert from and to. The useEffect hook fetches real-time exchange rates from an API (exchangerate-api.com) whenever the amount or currency selection changes. The converted value is calculated and displayed. Bootstrap is used for layout, and the axios library is utilized for making the API requests.</p>
+                    </div>                  
+
+                </div>
+
                 
             </div>
         </>
