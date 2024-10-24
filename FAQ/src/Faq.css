@@ -8,7 +8,7 @@
 }
 
 body{
-    background-color:#2E6EA6 !important;
+    background-color:#cadafc;
     height:100vh;
     width:100vw;
     display:flex;
@@ -19,39 +19,41 @@ body{
 h2{
     padding:10px;
     font-weight: 600;
-    color:#333;
+    color:#fff;
 
 }
 .faq-container{
     padding:20px;
     border:1px solid #dfdfdf;
     margin-bottom: 15px;
-    background-color: #4590BF;
+    background-color: #fff;
     border-radius: 5px;
     width:100%;
 }
 
 .faq-question{
     padding:10px 5px;
-    background-color: #8fccf1;
+    background-color: #fff ;
     border-radius: 5px;
-    color:#fff;
+    color:black;
     font-weight: 600;
     border:1px solid #333;
+    transition: all 0.3s linear;
 }
 
 .faq-question:hover{
-    background-color: #56a7ee;
+    background-color:black ;
+    color:#fff;
 }
 
 .faq-answer{
     margin-top:5px;
-    background-color: #2E6EA6;
+    background-color: #333;
     border-radius: 5px;
     max-height:0px;
     overflow:hidden;
-    transition: max-height 0.5s ease;
-    transition: padding 0.8s ease;
+    transition: max-height 0.5s linear;
+    transition: padding 0.5s linear;
     color:#fff;
 }
 
