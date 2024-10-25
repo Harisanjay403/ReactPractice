@@ -85,6 +85,93 @@ export const Project = () =>{
 
                 </div>
 
+                <div className="project">
+                    <div className="img-container">
+                        <div className="project-img">
+                            <img src="./src/assets/faq.JPG" alt="Image" />
+                        </div>
+
+                        <div className="project-button">
+                            <a href="https://github.com/Harisanjay403/ReactPractice/tree/main/FAQ/src" ><button>Github-Code</button></a>
+                            <a href="https://faq-harisanjay-rajan.web.app/"><button>Website</button></a>
+                        </div>
+
+                    </div>           
+                    
+                    <div className="project-content">
+                        <h1>FAQ</h1>
+                        <p>This React component creates a FAQ section using the useState hook to manage the visibility of answers. When a question is clicked, the corresponding answer toggles between visible and hidden. The component utilizes React-Bootstrap for layout, structuring the content within a Container, Row, and Col. An array of FAQ data is mapped to render individual FaqContainer components for each question-answer pair. This design enhances user interaction and presents information in a clean, organized manner.</p>
+                    </div> 
+                 
+
+                </div>
+
+                <div className="project">
+                    <div className="img-container">
+                        <div className="project-img">
+                            <img src="./src/assets/foodcart.JPG" alt="Image" />
+                        </div>
+
+                        <div className="project-button">
+                            <a href="https://github.com/Harisanjay403/ReactPractice/tree/main/foodcart/src" ><button>Github-Code</button></a>
+                            <a href="https://food-cart-harisanjay-rajan.web.app/"><button>Website</button></a>
+                        </div>
+
+                    </div>           
+                    
+                    <div className="project-content">
+                        <h1>Foodcart</h1>
+                        <p>This React application sets up routing and state management using react-router-dom. The App component initializes a shopping cart state with useState. It renders a Header component that displays the cart's contents. The main content is structured within a container, with two routes: the home page and the cart page. The Home and Cart components receive the cart state and the setCart function as props, allowing them to update the cart dynamically.</p>
+                    </div> 
+
+                                      
+
+                </div>
+
+                <div className="project">
+                    <div className="img-container">
+                        <div className="project-img">
+                            <img src="./src/assets/password.JPG" alt="Image" />
+                        </div>
+
+                        <div className="project-button">
+                            <a href="https://github.com/Harisanjay403/ReactPractice/tree/main/passwordGenerator/src" ><button>Github-Code</button></a>
+                            <a href="https://password-generator-harisanjay.web.app/"><button>Website</button></a>
+                        </div>
+
+                    </div>           
+                    
+                    <div className="project-content">
+                        <h1>Strong Password Generator</h1>
+                        <p>The PasswordGenerator component allows users to create customizable passwords. Users can select options for uppercase letters, lowercase letters, numbers, and symbols, as well as specify the password length. When the "Generate Password" button is clicked, a random password is created based on these settings. The generated password can be copied to the clipboard with an alert confirmation. The component uses React hooks for state management and updates, along with Bootstrap for styling and layout.</p>
+                    </div> 
+
+                                      
+
+                </div>
+
+                <div className="project">
+                    <div className="img-container">
+                        <div className="project-img">
+                            <img src="./src/assets/password.JPG" alt="Image" />
+                        </div>
+
+                        <div className="project-button">
+                            <a href="https://github.com/Harisanjay403/ReactPractice/tree/main/passwordGenerator/src" ><button>Github-Code</button></a>
+                            <a href="https://password-generator-harisanjay.web.app/"><button>Website</button></a>
+                        </div>
+
+                    </div>           
+                    
+                    <div className="project-content">
+                        <h1>Strong Password Generator</h1>
+                        <p>The PasswordGenerator component allows users to create customizable passwords. Users can select options for uppercase letters, lowercase letters, numbers, and symbols, as well as specify the password length. When the "Generate Password" button is clicked, a random password is created based on these settings. The generated password can be copied to the clipboard with an alert confirmation. The component uses React hooks for state management and updates, along with Bootstrap for styling and layout.</p>
+                    </div> 
+
+                                      
+
+                </div>
+
                 
             </div>
         </>
