@@ -4,6 +4,7 @@ import {Header} from './Header.jsx'
 import { Home } from './Home.jsx'
 import { Project } from './Project.jsx'
 import { Resume } from './Resume.jsx'
+import { Footer } from './Footer.jsx'
 
 function App() {
   
@@ -19,6 +20,7 @@ function App() {
           
         
       </Routes>
+      < Footer />
     </BrowserRouter>
       
      
