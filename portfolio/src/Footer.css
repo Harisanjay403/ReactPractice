@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: "Poppins", serif;
+    color:#fff;
+}
+
 .footer-container{
     width:100%;
     min-height: 300px;
@@ -5,5 +12,46 @@
     background-repeat: no-repeat;
     background-size: cover;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:10px;
+    
    
+}
+
+h1{
+    color:#fff;
+    font-weight: 500;
+}
+
+.lists ul{
+    display:flex;
+    gap:20px;
+}
+
+.lists ul li {
+   list-style-type: none;
+}
+
+.lists ul li a{
+    text-decoration: none;
+}
+
+.logos{
+    display:flex;
+    gap:10px;
+}
+
+
+
+.logos a img{
+    height: 30px;
+    width:30px;    
+    border-radius: 6px;
+}
+
+.logos a:nth-child(2) img{
+    background-color: #fff;
 }
