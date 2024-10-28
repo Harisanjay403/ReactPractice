@@ -258,7 +258,3 @@ export const Project = () =>{
 }
 
                 
-            </div>
-        </>
-    )
-}
