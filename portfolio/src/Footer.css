@@ -24,6 +24,7 @@
 h1{
     color:#fff;
     font-weight: 500;
+    cursor: pointer;
 }
 
 .lists ul{
@@ -54,4 +55,8 @@ h1{
 
 .logos a:nth-child(2) img{
     background-color: #fff;
+}
+
+.designedby p{
+    color:#888;
 }

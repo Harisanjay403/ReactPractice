@@ -23,10 +23,11 @@
 .project{
     width:95%;
     border:1px solid #888;
-    background-color: rgba(0, 0, 0, 0.1); 
+    background-color: #fff; 
     display:flex;
     margin:10px;
     border-radius: 5px;
+    
 }
 .img-container{
     display:flex;
@@ -58,15 +59,16 @@
 }
 
 .project-content h1{
-    color:#fff;
+    color:#3498db;
     font-weight:600;
     
 }
 
 .project-content p{
-    color:#fff;
+    color:#888;
     text-align: justify;
-    padding:10px;
+    padding:14px;
+    line-height:2;
 }
 
 .project-button{
