@@ -169,7 +169,7 @@
     font-size: 18px;
     font-weight: 600;
     text-shadow: 10px salmon;
-    z-index: ;
+    z-index: 1;
   }
   .tooltip-container:hover {
     border-top-left-radius: 0;
