@@ -23,10 +23,10 @@ export const Contact = () =>{
                             <span class="text">Email</span>
                         </div>
                         </div>
-                        <p>harisanjay403@gmail.com</p>
+                        <p>harisanjay403 <br />@gmail.com</p>
                     </div>
 
-                    <div className="address">                     
+                    <div className="socialmedia">                     
                         <div class="loader"></div>
                         <p>Ramanathapuram,<br />Coimbatore-641036 <br />Tamil Nadu <br /> India</p>
                     </div>
