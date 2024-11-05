@@ -1,4 +1,5 @@
 import "./Contact.css"
+import { Link } from "react-router-dom"
 
 export const Contact = () =>{
 
@@ -27,8 +28,12 @@ export const Contact = () =>{
                     </div>
 
                     <div className="socialmedia">                     
-                        <div class="loader"></div>
-                        <p>Ramanathapuram,<br />Coimbatore-641036 <br />Tamil Nadu <br /> India</p>
+                        <div className="linkedin">
+                        <Link to={'https://www.linkedin.com/in/harisanjay-rajan-hari62'}> <img src='./src/assets/linkedin.png' alt="" /></Link>
+                        </div>
+                        <div className="whatsapp">
+                        <Link to={'https://wa.me/9688616162'}> <img src='./src/assets/whatsapp.png' alt="" /></Link>
+                        </div>
                     </div>
 
                     

@@ -223,4 +223,19 @@
     opacity: 1;
     transition-duration: 0.3s;
   }
+
+.socialmedia{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  gap:15px;
+  flex-direction: row;
+}
+
+
+.socialmedia img{
+  height:70px;
+  width:70px;
+
   
+}
