@@ -5,7 +5,7 @@ export const Project = () =>{
     return(
         <>
             <div className="project-container">
-                <div className="project">
+                <div className="project" data-aos="fade-right">
                     <div className="img-container">
                         <div className="project-img">
                             <img src="./src/assets/bmiImg.png" alt="BMI Image" />
@@ -25,7 +25,7 @@ export const Project = () =>{
 
                 </div>
 
-                <div className="project">
+                <div className="project" data-aos="fade-left">
                     <div className="img-container">
                         <div className="project-img">
                             <img src="./src/assets/calendarImg.jpg" alt="Image" />
@@ -45,7 +45,7 @@ export const Project = () =>{
 
                 </div>
 
-                <div className="project">
+                <div className="project" data-aos="fade-right">
                     <div className="img-container">
                         <div className="project-img">
                             <img src="./src/assets/currencyconverterimg.JPG" alt="Image" />
@@ -66,7 +66,7 @@ export const Project = () =>{
 
                 </div>
 
-                <div className="project">
+                <div className="project" data-aos="fade-left">
                     <div className="img-container">
                         <div className="project-img">
                             <img src="./src/assets/digitalclockimg.JPG" alt="Image" />
@@ -86,7 +86,7 @@ export const Project = () =>{
 
                 </div>
 
-                <div className="project">
+                <div className="project" data-aos="fade-right">
                     <div className="img-container">
                         <div className="project-img">
                             <img src="./src/assets/faq.JPG" alt="Image" />
@@ -107,7 +107,7 @@ export const Project = () =>{
 
                 </div>
 
-                <div className="project">
+                <div className="project" data-aos="fade-left">
                     <div className="img-container">
                         <div className="project-img">
                             <img src="./src/assets/foodcart.JPG" alt="Image" />
@@ -129,7 +129,7 @@ export const Project = () =>{
 
                 </div>
 
-                <div className="project">
+                <div className="project" data-aos="fade-right">
                     <div className="img-container">
                         <div className="project-img">
                             <img src="./src/assets/password.JPG" alt="Image" />
@@ -151,7 +151,7 @@ export const Project = () =>{
 
                 </div>
 
-               <div className="project">
+               <div className="project" data-aos="fade-left">
                     <div className="img-container">
                         <div className="project-img">
                             <img src="./src/assets/qrcodeGenerator.JPG" alt="Image" />
@@ -173,7 +173,7 @@ export const Project = () =>{
 
                 </div>
 
-                <div className="project">
+                <div className="project" data-aos="fade-right">
                     <div className="img-container">
                         <div className="project-img">
                             <img src="./src/assets/mcq.JPG" alt="Image" />
@@ -193,7 +193,7 @@ export const Project = () =>{
                     </div>                                    
 
                 </div>
-                <div className="project">
+                <div className="project" data-aos="fade-left">
                     <div className="img-container">
                         <div className="project-img">
                             <img src="./src/assets/registration.JPG" alt="Image" />
@@ -212,7 +212,7 @@ export const Project = () =>{
                     </div>                                    
 
                 </div>
-                <div className="project">
+                <div className="project" data-aos="fade-right">
                     <div className="img-container">
                         <div className="project-img">
                             <img src="./src/assets/usercard.JPG" alt="Image" />
@@ -232,7 +232,7 @@ export const Project = () =>{
 
                 </div>
 
-                <div className="project">
+                <div className="project" data-aos="fade-left">
                     <div className="img-container">
                         <div className="project-img">
                             <img src="./src/assets/weather.JPG" alt="Image" />
