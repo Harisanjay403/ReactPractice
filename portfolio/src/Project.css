@@ -109,6 +109,51 @@
    
 }
 
+.digital-project-img{
+    background-image: url("./assets/digitalclockimg.JPG");
+   
+}
+
+.faq-project-img{
+    background-image: url("./assets/faq.JPG");
+   
+}
+
+.foodcart-project-img{
+    background-image: url("./assets/foodcart.JPG");
+   
+}
+
+.mcq-project-img{
+    background-image: url("./assets/mcq.JPG");
+   
+}
+
+.password-project-img{
+    background-image: url("./assets/password.JPG");
+   
+}
+
+.qrcode-project-img{
+    background-image: url("./assets/qrcodeGenerator.JPG");
+   
+}
+
+.registration-project-img{
+    background-image: url("./assets/registration.JPG");
+   
+}
+
+.user-project-img{
+    background-image: url("./assets/usercard.JPG");
+   
+}
+
+.weather-project-img{
+    background-image: url("./assets/weather.JPG");
+   
+}
+
 [class*=project-img]{
     height:240px;
     width:240px;
