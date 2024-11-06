@@ -14,6 +14,7 @@
     height:100vh;
     width:100vw;
     gap:20px;
+    
 }
 
 .about-me{
@@ -27,9 +28,13 @@
     
 }
 
-.img-container{
-    background-color: #fff;
+.home-img-container{    
+    height:380px;
+    width:280px;
     border-radius: 8px;
+    
+    background-image: url('./assets/hari-img.jpeg');
+    background-size: cover;
 }
 
 .img-container img{

@@ -93,3 +93,29 @@
 .project-button button:hover{
     background-color:blueviolet;
 }
+
+.bmi-project-img{
+    background-image: url("./assets/bmiImg.png");
+    
+    
+}
+.calendar-project-img{
+    background-image: url("./assets/calendarImg.jpg");
+   
+}
+
+.currency-project-img{
+    background-image: url("./assets/currencyconverterimg.JPG");
+   
+}
+
+[class*=project-img]{
+    height:240px;
+    width:240px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border:1px solid rgb(225, 225, 225);
+    border-radius: 8px;
+
+}

@@ -1,4 +1,5 @@
 import './Project.css'
+import bmi from './assets/bmiImg.png'
 
 export const Project = () =>{
     
@@ -7,8 +8,8 @@ export const Project = () =>{
             <div className="project-container">
                 <div className="project" data-aos="fade-right">
                     <div className="img-container">
-                        <div className="project-img">
-                            <img src="./src/assets/bmiImg.png" alt="BMI Image" />
+                        <div className="bmi-project-img">
+                            
                         </div>
 
                         <div className="project-button">
@@ -27,8 +28,7 @@ export const Project = () =>{
 
                 <div className="project" data-aos="fade-left">
                     <div className="img-container">
-                        <div className="project-img">
-                            <img src="./src/assets/calendarImg.jpg" alt="Image" />
+                        <div className="calendar-project-img">
                         </div>
 
                         <div className="project-button">
@@ -47,8 +47,8 @@ export const Project = () =>{
 
                 <div className="project" data-aos="fade-right">
                     <div className="img-container">
-                        <div className="project-img">
-                            <img src="./src/assets/currencyconverterimg.JPG" alt="Image" />
+                        <div className="currency-project-img">
+                            
                         </div>
 
                         <div className="project-button">
