@@ -1,7 +1,6 @@
 {
   "projects": {
-    "default": "harisanjayrajan-bmi",
-    "dd": "harisanjayrajan-bmi"
+    "default": "bmi-app-harisanjay-rajan"
   },
   "targets": {},
   "etags": {}
