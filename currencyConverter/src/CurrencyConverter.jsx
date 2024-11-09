@@ -52,7 +52,7 @@ export const CurrencyConverter = () => {
       <Container>
         <Row>
           <Col xs={12} >
-            <div className="container">
+            <div className="item-container">
               <div className="img"></div>
 
               <div className="data">

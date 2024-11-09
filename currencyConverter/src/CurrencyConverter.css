@@ -30,10 +30,10 @@ body{
 
 
 
-.container{
+.item-container{
     background-color:ghostwhite;
     /* width:400px; */
-    padding:10px;
+    padding:12px;
     border-radius: 8px;
     margin-top:auto;
 }
@@ -57,7 +57,7 @@ label{
     font-weight:500;
 }
 .input-container{
-    margin: 5px 0px;
+    margin: 15px 0px;
     padding:5px 0px;
 }
 
@@ -80,7 +80,7 @@ label{
     text-align:center;
     padding:5px 0px;
     border:2px solid #349;
-    margin: 5px 0px;
+    margin: 35px 0px 10px 0px;
     border-radius: 8px;
     color:#555;
     font-size: larger;
