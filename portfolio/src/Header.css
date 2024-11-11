@@ -11,7 +11,13 @@
     display:flex;
     width:100%;
     justify-content: space-between;
-    
+    position: fixed;
+    top:0px;
+    left:0px;
+    background-color: black;
+    background-size: cover;
+    background-image: url('./assets/footerbg.jpeg');
+    /* padding:4px; */
 }
 
 .logo{

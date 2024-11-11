@@ -32,16 +32,15 @@
     height:380px;
     width:280px;
     border-radius: 8px;
+    object-fit: cover;
+    background-color: #fff;
+   
     
-    background-image: url('./assets/hari-img.jpeg');
-    background-size: cover;
 }
 
-.img-container img{
+.home-img-container img{
     height:380px;
     width:280px;
-    filter: contrast(1.5);
-    opacity: 0.7;
     border-radius: 8px;
     padding:5px;
 }

@@ -9,7 +9,7 @@ export const Footer = () =>{
     return(
         <>
             <div className="footer-container">
-                <h1 data-aos="fade-down" data-aos-duration="1000">Harisanjay Rajan</h1>
+            <Link to={"/"} ><h1 data-aos="fade-down" data-aos-duration="1000">Harisanjay Rajan</h1></Link>
 
                 <div className="lists">
                     <ul>
