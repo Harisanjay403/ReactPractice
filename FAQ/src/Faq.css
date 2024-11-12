@@ -8,7 +8,7 @@
 }
 
 body{
-    background-color:rgb(146, 144, 144);
+    background-color:#cadafc;
     height:100vh;
     width:100vw;
     display:flex;
@@ -26,31 +26,35 @@ h2{
     padding:20px;
     border:1px solid #dfdfdf;
     margin-bottom: 15px;
-    background-color: rgb(116, 116, 116);
+    background-color: #fff;
     border-radius: 5px;
-    width:800px;
+    width:100%;
 }
 
 .faq-question{
     padding:10px 5px;
-    background-color: darkgray;
+    background-color: #fff ;
     border-radius: 5px;
-    color:#fff;
+    color:black;
     font-weight: 600;
+    border:1px solid #333;
+    transition: all 0.3s linear;
 }
 
 .faq-question:hover{
-    background-color: rgb(201, 198, 198);
+    background-color:black ;
+    color:#fff;
 }
 
 .faq-answer{
     margin-top:5px;
-    background-color: rgb(221, 220, 220);
+    background-color: #333;
     border-radius: 5px;
     max-height:0px;
     overflow:hidden;
-    transition: max-height 0.5s ease;
-    transition: padding 0.8s ease;
+    transition: max-height 0.5s linear;
+    transition: padding 0.5s linear;
+    color:#fff;
 }
 
 

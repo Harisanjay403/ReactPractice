@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
+import { Container, Row, Col} from 'react-bootstrap'
 import './WeatherApp.css'
+
 
 import clearSun from './assets/clearSun.png'
 import cloud from './assets/cloud.jpg'
@@ -119,19 +121,26 @@ export const WeatherApp = () => {
         search()
     },[])
   return (
-    <div className='container'>
-        <div className='city-input'>
-            <input type="text" placeholder='Search the city' onChange={handleCityName} value={cityName} onKeyDown={handleSearch}/><span><img src="https://static.vecteezy.com/system/resources/thumbnails/014/440/989/small/search-black-shadow-icon-socialicon-set-png.png" alt="search-icon" onClick={()=>{search()}} /></span>
-        </div>
+    <Container>
+        <Row>
+            <Col xs={12}>
+                <div className='data-container'>
+                    <div className='city-input'>
+                        <input type="text" placeholder='Search the city' onChange={handleCityName} value={cityName} onKeyDown={handleSearch}/><span><img src="https://static.vecteezy.com/system/resources/thumbnails/014/440/989/small/search-black-shadow-icon-socialicon-set-png.png" alt="search-icon" onClick={()=>{search()}} /></span>
+                    </div>            
+                    
+                    {loading && <div className="loading"> Loading...</div>}
+                    
+                    {cityNotFound && <div className="city-not-found"> City Not Found</div>}
 
-        
-        {loading && <div className="loading"> Loading...</div>}
-        {cityNotFound && <div className="city-not-found"> City Not Found</div>}
-
-        {!cityNotFound && < WeatherDetail weatherimg={weatherimg} temp={temp} city={city} country={country} lat={lat} lon={lon} humidity={humidity} wind={wind} weatherCondition={weatherCondition}/>}
-        
-        <p className='copyright'>Designed by <span>Harisanjay</span></p>
-        
-    </div>
+                    {!cityNotFound && < WeatherDetail weatherimg={weatherimg} temp={temp} city={city} country={country} lat={lat} lon={lon} humidity={humidity} wind={wind} weatherCondition={weatherCondition}/>}
+            
+                    <p className='copyright'>Designed by <span>Harisanjay</span></p>
+            
+                </div>
+            </Col>
+        </Row>
+    </Container>
+    
   )
 }

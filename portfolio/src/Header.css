@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+*{
+    padding:0px; 
+    margin:0px;
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+}
+
+.header-container{
+    display:flex;
+    width:100%;
+    justify-content: space-between;
+    position: fixed;
+    top:0px;
+    left:0px;
+    background-color: black;
+    background-size: cover;
+    background-image: url('./assets/footerbg.jpeg');
+    /* padding:4px; */
+}
+
+.logo{
+    display:flex;
+    gap:4px;
+    padding:10px;
+}
+
+
+.logo h1{
+    display:inline-block;
+    text-decoration: none;
+    color:#fff;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.links{
+    display:flex;
+}
+
+.links ul{
+    list-style-type: none;
+    display:flex;
+    padding:10px;
+    align-items: center;
+
+}
+
+.links ul li a{
+    text-decoration: none;
+    color:#fff;
+    padding:6px 12px;
+    font-size: 17px;
+    margin:0px 8px;
+    font-weight: 400;
+}
+
+.links ul li a:hover{
+    background-color:#fff;
+    color:#000000;
+    border-radius:15px;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+   
+}

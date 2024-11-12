@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './Calender.css'
+import {Container, Row, Col } from 'react-bootstrap'
 
 export const Calender = () => {
 
@@ -49,33 +50,44 @@ export const Calender = () => {
     }
 
     return(
-        <>
-            <div className="calender">
-                <div className="header">
-                    <button onClick={handlePreviousMonth}>&lt;</button>
+        <>           
 
-                    <select className='months' onChange={handleMonth} value={currentDate.getMonth()} >
-                        {months.map((month,intex)=>(<option value={intex} key={intex} >{month}</option>))}
-                    </select>
+                <Container >
+                    <Row>
+                        <Col xs={12} >
+                        <div className="calender p-3">
+                            <div className="header">
+                                <button onClick={handlePreviousMonth}>&lt;</button>
 
-                    <select className='years' onChange={handleYear} value={currentDate.getFullYear()}>
-                        {Array.from({length:10}, (_,i)=> currentDate.getFullYear()-5+i).map((year)=>(<option value={year} key={year} >{year}</option>))}
-                    </select>
+                                <select className='months' onChange={handleMonth} value={currentDate.getMonth()} >
+                                    {months.map((month,intex)=>(<option value={intex} key={intex} >{month}</option>))}
+                                </select>
 
-                    <button onClick={handleNextMonth}>&gt;</button>
-                </div>
+                                <select className='years' onChange={handleYear} value={currentDate.getFullYear()}>
+                                    {Array.from({length:10}, (_,i)=> currentDate.getFullYear()-5+i).map((year)=>(<option value={year} key={year} >{year}</option>))}
+                                </select>
 
-                <div className="week-days">
-                    {weekDays.map((day,index)=>(
-                        <div key={index}>{day}</div>
-                    ))}
-                </div>
+                                <button onClick={handleNextMonth}>&gt;</button>
+                            </div>
 
-                <div className="dates">
-                    {datesOfMonth().map((date,index)=>(<div key={index} className={date? (isSameDate(date, new Date())? "date current":"date"): "empty"}>{date?date.getDate():""}</div>))}
-                </div>
+                            <div className="week-days">
+                                {weekDays.map((day,index)=>(
+                                    <div key={index}>{day}</div>
+                                ))}
+                            </div>
 
-            </div>
+                            <div className="dates">
+                                {datesOfMonth().map((date,index)=>(<div key={index} className={date? (isSameDate(date, new Date())? "date current":"date"): "empty"}>{date?date.getDate():""}</div>))}
+                            </div>
+                        </div>
+                        </Col>
+                    </Row>
+                </Container>
+
+
+                
+
+            
         </>
     )
 }

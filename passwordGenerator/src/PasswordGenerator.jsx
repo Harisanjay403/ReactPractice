@@ -1,6 +1,8 @@
 
 import { useEffect, useState } from 'react'
 import './PasswordGenerator.css'
+import { Container, Row, Col} from 'react-bootstrap'
+
 export const PasswordGenerator = ()=>{
     const [upperCase,setUpperCase]=useState(true)
     const [lowerCase,setLowerCase]=useState(true)
@@ -48,47 +50,55 @@ export const PasswordGenerator = ()=>{
 
     return(
         <>
-        <div className="container">
-            <h1 className='heading'>Strong Password Generator</h1>
+        <Container>
+            <Row>
+                <Col xs={12}>
+                <div className="data-container">
+                    <h1 className='heading'>Strong Password Generator</h1>
+                
+                    <div className="input-data">
+                        <label htmlFor="input-length">Password Length</label>
+                        <input type="number" id="input-length" value={length} onChange={handleLength} />
+                    </div>
+
+                    <div className="include-group">
+                        <input 
+                            type="checkbox" 
+                            id="uppercase" 
+                            checked={upperCase} 
+                            onChange={(e)=>setUpperCase(e.target.checked)}/>
+                        <label htmlFor="uppercase"> Include Upper Case</label>
+                    </div>
+
+                    <div className="include-group">
+                            <input type="checkbox" id="lowercase" checked={lowerCase}  onChange={(e)=>setLowerCase(e.target.checked)}/>
+                        <label htmlFor="lowercase"> Include Lower Case</label>
+                    </div>
+
+                    <div className="include-group">
+                        <input type="checkbox" id="number" checked={number}  onChange={(e)=>setNumber(e.target.checked)}/>
+                        <label htmlFor="number"> Include number </label>
+                    </div>
+
+                    <div className="include-group">
+                        <input type="checkbox" id="symbol" checked={symbol}  onChange={(e)=>setSymbol(e.target.checked)} />
+                        <label htmlFor="symbol"> Include symbol </label>
+                    </div>
+
+                    <button className='generate-button' onClick={handleGenerate} >Generate Password</button>
+
+                    <div className="generated-password">
+                        <input type="text" readOnly value={generatePassword} />
+                        <button onClick={handleCopy}>Copy</button>
+                    </div>
+
             
-                <div className="input-data">
-                    <label htmlFor="input-length">Password Length</label>
-                    <input type="number" id="input-length" value={length} onChange={handleLength} />
                 </div>
 
-                <div className="include-group">
-                    <input 
-                        type="checkbox" 
-                        id="uppercase" 
-                        checked={upperCase} 
-                        onChange={(e)=>setUpperCase(e.target.checked)}/>
-                    <label htmlFor="uppercase"> Include Upper Case</label>
-                </div>
-
-                <div className="include-group">
-                        <input type="checkbox" id="lowercase" checked={lowerCase}  onChange={(e)=>setLowerCase(e.target.checked)}/>
-                    <label htmlFor="lowercase"> Include Lower Case</label>
-                </div>
-
-                <div className="include-group">
-                    <input type="checkbox" id="number" checked={number}  onChange={(e)=>setNumber(e.target.checked)}/>
-                    <label htmlFor="number"> Include number </label>
-                </div>
-
-                <div className="include-group">
-                    <input type="checkbox" id="symbol" checked={symbol}  onChange={(e)=>setSymbol(e.target.checked)} />
-                    <label htmlFor="symbol"> Include symbol </label>
-                </div>
-
-                <button className='generate-button' onClick={handleGenerate} >Generate Password</button>
-
-                <div className="generated-password">
-                    <input type="text" readOnly value={generatePassword} />
-                    <button onClick={handleCopy}>Copy</button>
-                </div>
-
-            
-        </div>
+                </Col>
+            </Row>
+        </Container>
+        
         </>
     )
 }

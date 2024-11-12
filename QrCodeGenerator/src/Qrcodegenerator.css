@@ -5,27 +5,38 @@
     font-family: "Lato", sans-serif;
     font-style:italic;
 }
+body{
+    background-color: #777A8C !important;
+    height: 100vh;
+    width:100vw;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .qr-code-container{
     display:flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height:100vh;
-    width:100%;
+    
+    /* min-width:300px; */
     margin-top:30px;
+    background-color: #454859;
+    border-radius: 10px;
+    margin:10px;
 }
 
 .heading{
     font-weight: 700;
     padding:7px;
-    color:#3498db;
+    color:#fff;
 }
 
 .img{
     padding:5px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    margin:10px 0;
+    margin:5px 0;
     border-radius:10px;
     display: flex;
 }
@@ -34,17 +45,20 @@
     display:block;
     padding:10px;
     font-size:18px;
-    color: #888888;
-    text-align:left;
+    color: #fff;
+    margin-left:18px;
+    align-self: flex-start;
+    font-weight: 700;
 }
 
 input{
     padding:10px 15px;
-    width:350px;
+    width:90%;
     margin-bottom:20px;
     outline:none;
-    border-color:#3498db;
-    border-radius:10px;
+    border:none;
+    border-radius:5px;
+    font-size: 16px !important;
 }
 
 .btn-div{
@@ -53,11 +67,11 @@ input{
 }
 
 button{
-    padding:10px 15px;
+    padding:10px 15px ;
     border:none;
     color:white;
     font-weight:700;
-    margin:30px 15px;
+    margin:30px 15px !important;
 }
 
 .generate-btn{
@@ -75,7 +89,7 @@ button{
 
 .footer{
     color:#777777;
-    margin-top:30px;
+    margin:10px;
 }
 
 .footer span{

@@ -1,5 +1,11 @@
 import React, { useState } from 'react'
 import './BmiApp.css'
+import bmiImg from './assets/bmiImg.png'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import { Image } from 'react-bootstrap';
 
 export const BmiApp = () => {
 
@@ -40,11 +46,20 @@ export const BmiApp = () => {
   }
 
   return (
-    <div>
-      <div className="bmi-calculator">
+    <>
+    
+    
+
+    <Container>
+      <Row >
+       
+        <Col xs={12} md={4} >
+          <div className="bg-img">
+          <Image src={bmiImg} alt="Example" fluid />
+          </div>
+        </Col>
         
-        <div className="bg-img"></div>
-        
+        <Col md={6}>
         <div className="bmi-data">
           <h1>Bmi calculator</h1>
           {errorMsg && <p className='error-msg'>{errorMsg}</p>}
@@ -67,7 +82,12 @@ export const BmiApp = () => {
               </div>)}
 
         </div>
-      </div>
-    </div>
+        
+        </Col>
+       
+      </Row>
+    </Container>
+      
+    </>
   )
 }
