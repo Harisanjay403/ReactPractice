@@ -14,6 +14,7 @@
     height:100vh;
     width:100vw;
     gap:20px;
+    margin:70px 0px;
     
 }
 
@@ -43,4 +44,15 @@
     width:280px;
     border-radius: 8px;
     padding:5px;
+}
+
+@media (max-width:576px){
+    .home-container{
+        flex-direction: column;
+        height:auto;
+        
+    }
+    .about-me{
+        width:80%;
+    }
 }

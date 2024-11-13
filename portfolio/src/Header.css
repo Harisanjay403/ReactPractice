@@ -74,6 +74,7 @@
     top:0px;
     right:0px;    
     transition: all 0.5s linear;
+    display:none
 }
 
 .menu-icon{
@@ -83,6 +84,7 @@
     position: absolute;
     top:0px;
     right:0px;
+    display:none;
 }
 
 .menu-icon img{
@@ -95,6 +97,7 @@
 
 .side-menu-links{
     margin-top:50px;
+    
 }
 
 .side-menu a {
@@ -112,4 +115,16 @@
 .side-menu a:hover{
     background-color: #000;
     color:#fff;
+}
+
+@media(max-width:576px){
+    .links{
+        display:none
+    }
+    .menu-icon{
+        display:flex;
+    }
+    .side-menu{
+        display:block
+    }
 }

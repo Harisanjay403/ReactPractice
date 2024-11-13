@@ -1,19 +1,30 @@
 import './Project.css'
-import bmi from './assets/bmiImg.png'
+import bmiImg from './assets/bmiImg.png'
+import calendarImg from './assets/calendarImg.jpg'
+import currencyConverterImg from './assets/currencyconverterimg.JPG'
+import digitalClockImg from './assets/digitalclockimg.JPG'
+import faqImg from './assets/faq.JPG'
+import foodCartImg from './assets/foodcart.JPG'
+import mcqImg from './assets/mcq.JPG'
+import passwordImg from './assets/password.JPG'
+import qrCodeImg from './assets/qrcodeGenerator.JPG'
+import registrationFormImg from './assets/registration.JPG'
+import usercardImg from './assets/usercard.JPG'
+import weatherImg from './assets/weather.JPG'
 
 export const Project = () =>{
  const data=[
     {
         aosType:"fade-right",
-        imgClassName:"bmi-project-img",
-        gitHublink:"",
-        websiteLink:"",
+        gitHublink:"https://github.com/Harisanjay403/ReactPractice/tree/main/bmi/src",
+        websiteLink:"https://bmi-app-harisanjay-rajan.web.app/",
         projectName:"BMI Calculator",
-        explaination:"This React code implements a BMI calculator app using the useState hook to manage height, weight, BMI values, statuses, and error messages. Bootstrap styles ensure a responsive layout, dynamically displaying calculated results and error messages."
+        explaination:"This React code implements a BMI calculator app using the useState hook to manage height, weight, BMI values, statuses, and error messages. Bootstrap styles ensure a responsive layout, dynamically displaying calculated results and error messages." ,
+        imgSrc:bmiImg
     },
     {
         aosType:"fade-left",
-        imgClassName:"calendar-project-img",
+        imgSrc:calendarImg,
         gitHublink:"https://github.com/Harisanjay403/ReactPractice/tree/main/Calender/src",
         websiteLink:"https://harisanjayrajancalendar.web.app/",
         projectName:"Calendar",
@@ -21,7 +32,7 @@ export const Project = () =>{
     },
     {
         aosType:"fade-right",
-        imgClassName:"currency-project-img",
+        imgSrc:currencyConverterImg,
         gitHublink:"https://github.com/Harisanjay403/ReactPractice/tree/main/currencyConverter/src",
         websiteLink:"https://currency-converter---hari.web.app/",
         projectName:"Currency Converter",
@@ -29,7 +40,7 @@ export const Project = () =>{
     },
     {
         aosType:"fade-left",
-        imgClassName:"digital-project-img",
+        imgSrc:digitalClockImg,
         gitHublink:"https://github.com/Harisanjay403/ReactPractice/tree/main/digitalClock/src",
         websiteLink:"https://digital-clock-harisanjayrajan.web.app/",
         projectName:"Digital Clock",
@@ -37,7 +48,7 @@ export const Project = () =>{
     },
     {
         aosType:"fade-left",
-        imgClassName:"faq-project-img",
+        imgSrc:faqImg,
         gitHublink:"https://github.com/Harisanjay403/ReactPractice/tree/main/FAQ/src" ,
         websiteLink:"https://faq-harisanjay-rajan.web.app/",
         projectName:"FAQ",
@@ -45,7 +56,7 @@ export const Project = () =>{
     },
     {
         aosType:"fade-right",
-        imgClassName:"foodcart-project-img",
+        imgSrc:foodCartImg,
         gitHublink:"https://github.com/Harisanjay403/ReactPractice/tree/main/foodcart/src" ,
         websiteLink:"https://food-cart-harisanjay-rajan.web.app/",
         projectName:"Food Cart",
@@ -53,7 +64,7 @@ export const Project = () =>{
     },
     {
         aosType:"fade-left",
-        imgClassName:"password-project-img",
+        imgSrc:passwordImg,
         gitHublink:"https://github.com/Harisanjay403/ReactPractice/tree/main/passwordGenerator/src" ,
         websiteLink:"https://password-generator-harisanjay.web.app/",
         projectName:"Strong Password Generator",
@@ -61,7 +72,7 @@ export const Project = () =>{
     },
     {
         aosType:"fade-right",
-        imgClassName:"qrcode-project-img",
+        imgSrc:qrCodeImg,
         gitHublink:"https://github.com/Harisanjay403/ReactPractice/tree/main/QrCodeGenerator/src",
         websiteLink:"https://qr-code-generator---harisanjay.web.app/",
         projectName:"QR Code Generator",
@@ -69,7 +80,7 @@ export const Project = () =>{
     },
     {
         aosType:"fade-left",
-        imgClassName:"mcq-project-img",
+        imgSrc:mcqImg,
         gitHublink:"https://github.com/Harisanjay403/ReactPractice/tree/main/Quiz/src",
         websiteLink:"https://mcq-harisanjay-rajan.web.app/",
         projectName:"Multiple Choice Question (MCQ)",
@@ -77,7 +88,7 @@ export const Project = () =>{
     },
     {
         aosType:"fade-right",
-        imgClassName:"registration-project-img",
+        imgSrc:registrationFormImg,
         gitHublink:"https://github.com/Harisanjay403/ReactPractice/tree/main/Registration/src" ,
         websiteLink:"https://registration-form-harisanjay-r.web.app/" ,
         projectName:"Simple Registration Form",
@@ -85,7 +96,7 @@ export const Project = () =>{
     },
     {
         aosType:"fade-left",
-        imgClassName:"user-project-img",
+        imgSrc:usercardImg,
         gitHublink:"https://github.com/Harisanjay403/ReactPractice/tree/main/UserCard/src" ,
         websiteLink:"https://user-card-harisanjay-rajan.web.app/",
         projectName:"User Card",
@@ -93,7 +104,7 @@ export const Project = () =>{
     },
     {
         aosType:"fade-right",
-        imgClassName:"weather-project-img",
+        imgSrc:weatherImg,
         gitHublink:"https://github.com/Harisanjay403/ReactPractice/tree/main/weatherApp/src" ,
         websiteLink:"https://weather-app-harisanjay-rajan.web.app/",
         projectName:"Weather App",
@@ -109,8 +120,10 @@ export const Project = () =>{
                 {data.map((item,index)=>(
                     <div className="project" data-aos={item.aosType} key={index}>
                     <div className="img-container">
-                        <div className={item.imgClassName}>
-                            
+                    
+                        <div className='project-img'>
+                            <img src={item.imgSrc} alt="project image" />
+                        
                         </div>
 
                         <div className="project-button">

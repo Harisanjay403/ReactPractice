@@ -49,7 +49,7 @@
 }
 
 .project-img img{
-    height:auto;
+    height:100%;
     width:100%;
     border-radius: 5px;
     flex-shrink: 0;
@@ -96,11 +96,7 @@
     background-color:blueviolet;
 }
 
-.bmi-project-img{
-    background-image: url("./assets/bmiImg.png");
-    
-    
-}
+
 .calendar-project-img{
     background-image: url("./assets/calendarImg.jpg");
    
