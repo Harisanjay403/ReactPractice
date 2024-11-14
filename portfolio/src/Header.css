@@ -18,6 +18,7 @@
     background-size: cover;
     background-image: url('./assets/footerbg.jpeg');
     /* padding:4px; */
+    z-index: 10;
 }
 
 .logo{
@@ -75,7 +76,7 @@
     right:0px;    
     transition: all 0.5s linear;
     display:none;
-    z-index:1000 !important;
+    z-index:1000 ;
 }
 
 .menu-icon{
@@ -83,8 +84,8 @@
     align-items: center;
     justify-content: center;
     position: absolute;
-    top:0px;
-    right:0px;
+    top:10px;
+    right:30px;
     display:none;
 }
 
