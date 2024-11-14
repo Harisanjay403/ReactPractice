@@ -2,6 +2,7 @@
 
 *{
   font-family: "Roboto", sans-serif;
+  
  
 }
 
@@ -15,7 +16,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    
+    z-index: 1;
     
 }
 
@@ -248,6 +249,8 @@
 .socialmedia img{
   height:70px;
   width:70px;
+  position: relative;
+
 
   
 }
