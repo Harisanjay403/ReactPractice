@@ -11,7 +11,8 @@ export const Contact = () =>{
         <>
         <Container>
             <Row>
-                <Col>
+                <Col>    
+
                     <div className="contact-container">
                         <div className="contacts" >
                             <div className="address box" data-aos="flip-left" data-aos-duration="1500">                     
@@ -44,7 +45,12 @@ export const Contact = () =>{
                             </div>
 
                             
+
+                            
                         </div>
+
+
+
                     </div>
                 
                 </Col>

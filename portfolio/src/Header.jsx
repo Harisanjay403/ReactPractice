@@ -35,25 +35,22 @@ export const Header = () =>{
                 </div>
 
                 <div className="menu-icon">
-                        <img src={menuIcon} onClick={handleSideMenu} alt="menu icon" />
-                    </div>
-                <div className="side-menu" style={{width: sideMenu?"300px" :"0px"}}>
+                    <img src={menuIcon} onClick={handleSideMenu} alt="menu icon" />
+                </div>
 
-                    
+                <div className="side-menu" style={{width: sideMenu?"300px" :"0px"}}>                    
 
                     <div className="side-menu-links">
                     
-                            <Link onClick={handleSideMenu} to={"/"}>Home</Link>
+                        <Link onClick={handleSideMenu} to={"/"}>Home</Link>
                         
-                            <Link onClick={handleSideMenu} to={"/project"}>Project</Link>
+                        <Link onClick={handleSideMenu} to={"/project"}>Project</Link>
                         
-                            <Link onClick={handleSideMenu} to={"/resume"}>Resume</Link>
+                        <Link onClick={handleSideMenu} to={"/resume"}>Resume</Link>
                         
-                            <Link onClick={handleSideMenu} to={"/contact"}>Contact</Link>
-                        
+                        <Link onClick={handleSideMenu} to={"/contact"}>Contact</Link>                       
 
                     </div>
-
 
                 </div>
                 
