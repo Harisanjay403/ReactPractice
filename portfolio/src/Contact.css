@@ -2,6 +2,7 @@
 
 *{
   font-family: "Roboto", sans-serif;
+ 
 }
 
 .contact-container{
@@ -12,6 +13,8 @@
     align-items: center;
     background-image: url('./assets/handshake.jpg');
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     
     
 }
@@ -29,6 +32,7 @@
   flex-direction: column;
   border-radius: 15px;
   gap:10px;
+  z-index: 1;
   
 }
 
@@ -40,6 +44,7 @@
   text-align: center;
   line-height: 1.5;
   font-size:18px;
+  z-index: 1;
 }
 
 .box:hover{
@@ -126,6 +131,7 @@
 .phone img{
     height: 70px;
     width:70px;
+    z-index: 0;
 }
 
 /* email icon css*/
@@ -244,4 +250,10 @@
   width:70px;
 
   
+}
+
+@media(max-width:576px){
+  .address p {
+    z-index: 0;
+  }
 }

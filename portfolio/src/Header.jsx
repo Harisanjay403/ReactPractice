@@ -43,13 +43,13 @@ export const Header = () =>{
 
                     <div className="side-menu-links">
                     
-                            <Link to={"/"}>Home</Link>
+                            <Link onClick={handleSideMenu} to={"/"}>Home</Link>
                         
-                            <Link to={"/project"}>Project</Link>
+                            <Link onClick={handleSideMenu} to={"/project"}>Project</Link>
                         
-                            <Link to={"/resume"}>Resume</Link>
+                            <Link onClick={handleSideMenu} to={"/resume"}>Resume</Link>
                         
-                            <Link to={"/contact"}>Contact</Link>
+                            <Link onClick={handleSideMenu} to={"/contact"}>Contact</Link>
                         
 
                     </div>

@@ -1,5 +1,5 @@
 import './Project.css'
-import { Container, Row, Col, Img } from 'react-bootstrap'
+import { Container, Row, Col, Image } from 'react-bootstrap'
 import bmiImg from './assets/bmiImg.png'
 import calendarImg from './assets/calendarImg.jpg'
 import currencyConverterImg from './assets/currencyconverterimg.JPG'
@@ -124,7 +124,7 @@ export const Project = () =>{
 
                     {data.map((item,index)=>(
                         <div className="project" data-aos={item.aosType} key={index}>
-                        <div className="img-container" col-xs-12>
+                        <div className="img-container">
                         
                             <div className='project-img'>
                                 <Image src={item.imgSrc} alt="project image" fluid />
