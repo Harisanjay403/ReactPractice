@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 *{
-    padding: 0px;
+    padding:0px;
     margin:0px;
     box-sizing: border-box;
     font-family: "Roboto", serif;
@@ -14,6 +14,7 @@
     display: flex;
     justify-content: center;
     align-items:center;
+    position: relative;
     margin-top: 70px;
 }
 .resume-container a {
@@ -22,8 +23,8 @@
     font-weight: 500;
     border-radius: 30px;
     position: fixed;
-    bottom:10px;
-    right:10px;
+    top:100px;
+    right:40px;
     text-decoration: none;
     padding:6px 10px;
 }
@@ -35,12 +36,12 @@
 }
 
 .resume-container img{
-    /* height:100%;*/
+    height:auto;
     width:90%; 
 }
 
-@media(max-width:576px){
-    .resume-container a{
-        bottom:30%;
-    }
+.resume-container a img{
+    height:20px;
+    width:20px;
 }
+

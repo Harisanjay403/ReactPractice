@@ -1,5 +1,5 @@
 import "./Resume.css"
-import bmi from './assets/bg_img.jpg'
+import download_icon from './assets/download_icon.png'
 import pdf from './assets/HarisanjayRajanResume.pdf'
 import HarisanjayRajanResume from './assets/HarisanjayRajanResume.jpg'
 import { Container, Row, Col, Image} from 'react-bootstrap'
@@ -9,10 +9,10 @@ export const Resume = () =>{
         <>
         <Container>
             <Row>
-                <Col xs={12}>
+                <Col xs={12} className="p-0">
                     <div className="resume-container">
                         <img src={HarisanjayRajanResume} alt="Resume" />
-                        <a href={pdf} download>Download Resume</a>
+                        <a href={pdf} download><Image src={download_icon}/></a>
                     </div>
                 </Col>
             </Row>

@@ -253,17 +253,28 @@
 
 .socialmedia img{
   height:70px;
-  width:70px;
-  position: relative;
-
-
-  
+  width:70px; 
 }
 
 @media(max-width:576px){
-  .address p {
-    z-index: 0;
+  .address,
+  .email,
+  .phone,
+  .socialmedia{
+    height:150px;
+    width:150px;
   }
+
+  .socialmedia img{
+    height:50px;
+    width:50px; 
+  }
+
+  .address p,
+.phone p,
+.email p,span {
+  font-size: 14px;
+}
 }
 
 

@@ -74,7 +74,7 @@
     position:absolute;
     top:0px;
     right:0px;    
-    transition: all 0.5s linear;
+    transition: all 0.3s linear;
     display:none;
     z-index:1000 ;
 }

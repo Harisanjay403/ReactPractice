@@ -9,23 +9,23 @@ export const Contact = () =>{
 
     return(
         <>
-        <Container>
+        <Container >
             <Row>
-                <Col>    
+                <Col xs={12} className="p-0">    
 
                     <div className="contact-container">
                         <div className="contacts" >
-                            <div className="address box" data-aos="flip-left" data-aos-duration="1500">                     
+                            <div className="address box col-6" data-aos="flip-left" data-aos-duration="1500">                     
                                 <div class="loader"></div>
                                 <p>Ramanathapuram,<br />Coimbatore-641036 <br />Tamil Nadu <br /> India</p>
                             </div>
 
-                            <div className="phone box" data-aos="flip-down" data-aos-duration="1500">                     
+                            <div className="phone box col-6" data-aos="flip-down" data-aos-duration="1500">                     
                                 <Image src={mobilepng} alt="mobile-icon" />                        
                                 <p>Mobile Number <br />9688616162</p>
                             </div>
 
-                            <div className="email box" data-aos="flip-up" data-aos-duration="1500">                     
+                            <div className="email box col-6" data-aos="flip-up" data-aos-duration="1500">                     
                                 <div class="icon">
                                 <div class="tooltip-container">
                                     <span class="tooltip">Harisanjay Rajan</span>
@@ -35,7 +35,7 @@ export const Contact = () =>{
                                 <p>harisanjay403 <br />@gmail.com</p>
                             </div>
 
-                            <div className="socialmedia box" data-aos="flip-right" data-aos-duration="1500">                     
+                            <div className="socialmedia box col-6" data-aos="flip-right" data-aos-duration="1500">                     
                                 <div className="linkedin">
                                 <Link to={'https://www.linkedin.com/in/harisanjay-rajan-hari62'}> <Image src={linkedinlogo} alt="" /></Link>
                                 </div>
