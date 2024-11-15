@@ -35,6 +35,12 @@
 }
 
 .resume-container img{
-    height:auto;
-    width:90%;
+    /* height:100%;*/
+    width:90%; 
+}
+
+@media(max-width:576px){
+    .resume-container a{
+        bottom:30%;
+    }
 }
